@@ -4,6 +4,10 @@ A public [v0 Design Systems 2.0](https://v0.app/docs/design-systems-2) bundle fo
 
 It gives v0 a verified Next.js starter, exact package and provider setup, all seven public themes, a custom-theme workflow, all 54 public page templates, all 646 public block templates, and representative component examples. It consumes public `@astryxdesign/*` packages instead of forking component implementations.
 
+## Before this becomes official
+
+> **Preview status:** This repository is not yet the official Astryx v0 bundle. Its current custom theming uses the transitional `defineTheme` color configuration; the official bundle will adopt Astryx's upcoming palette-based theming API. Theme examples and metadata may change during that migration. Official status requires both the palette migration and a completed authenticated v0 import.
+
 ## Import into v0
 
 1. Open the [v0 Design Systems page](https://v0.app/design-systems) and start a new import.
