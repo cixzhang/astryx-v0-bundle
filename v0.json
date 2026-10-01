@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "referenceWorkspace": {
+    "sources": [
+      {
+        "id": "github-repo:facebook/astryx:v0.6.3",
+        "type": "github-repo",
+        "repo": {
+          "org": "facebook",
+          "name": "astryx"
+        },
+        "ref": "v0.6.3",
+        "mountPath": "/vercel/share/v0-reference-workspace-sources/facebook/astryx/v0.6.3"
+      }
+    ]
+  },
+  "starter": {
+    "source": "skill-directory",
+    "path": "assets/starter"
+  }
+}

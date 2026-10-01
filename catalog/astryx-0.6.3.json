@@ -18696,7 +18696,7 @@
   "exclusions": [
     {
       "id": "private-packages",
-      "decision": "Exclude @astryxdesign/lab, @astryxdesign/vega, and every unpublished package.",
+      "decision": "Exclude every package that is not publicly published.",
       "reason": "The bundle must depend only on public @astryxdesign/* packages."
     },
     {

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "astryxVersion": "0.6.3",
+  "cases": [
+    {
+      "id": "analytics-dashboard",
+      "prompt": "Create a responsive product analytics dashboard with a date range, KPI cards, and two charts. Use Astryx and keep the mobile reading order useful.",
+      "startingEntries": ["page:dashboard"],
+      "theme": "neutral",
+      "expected": [
+        "Starts from the official Analytics Dashboard page template.",
+        "Uses Astryx layout and chart composition without adding a second component system.",
+        "Uses Grid columns={{minWidth: ...}} or another documented Astryx responsive layout.",
+        "Preserves a meaningful heading hierarchy and mobile reading order."
+      ],
+      "forbidden": [
+        "Invented Astryx props",
+        "Tailwind or shadcn replacement components"
+      ]
+    },
+    {
+      "id": "settings-form",
+      "prompt": "Build account notification settings with email and push toggles, a digest frequency selector, validation, and save feedback.",
+      "startingEntries": ["page:settings"],
+      "theme": "stone",
+      "expected": [
+        "Starts from an official settings composition.",
+        "Keeps each form value controlled and visibly labeled.",
+        "Uses documented validation status and feedback components.",
+        "Keeps keyboard focus usable during save progress."
+      ],
+      "forbidden": ["Unlabeled controls", "Color-only validation"]
+    },
+    {
+      "id": "checkout-wizard",
+      "prompt": "Create a three-step checkout for contact, delivery, and payment details with back and continue actions.",
+      "startingEntries": ["page:checkout-wizard"],
+      "theme": "butter",
+      "expected": [
+        "Starts from the official Checkout Wizard template.",
+        "Keeps step state and form values controlled.",
+        "Uses semantic headings and clear progress text.",
+        "Does not turn product checkout policy into a shared component API."
+      ],
+      "forbidden": ["Forked Astryx component source", "Hidden error messages"]
+    },
+    {
+      "id": "custom-theme",
+      "prompt": "Create an Astryx theme with a blue accent, compact type scale, slightly sharper cards, and a stronger primary button. Support light and dark mode.",
+      "startingEntries": ["page:theme-showcase"],
+      "theme": "custom",
+      "expected": [
+        "Uses defineTheme and extends a public Astryx source theme.",
+        "Uses documented token scales and stable component targets.",
+        "Keeps the no-custom-theme path working.",
+        "Explains how to build and import production theme artifacts."
+      ],
+      "forbidden": [
+        "Copied component implementation",
+        "Generated StyleX class selectors"
+      ]
+    },
+    {
+      "id": "theme-presets",
+      "prompt": "Make a small theme comparison page that can switch across every public Astryx preset and light, dark, or system mode.",
+      "startingEntries": ["page:theme-showcase"],
+      "theme": "neutral",
+      "expected": [
+        "Includes neutral, butter, chocolate, gothic, matcha, stone, and y2k.",
+        "Imports each built theme value with its matching theme.css.",
+        "Uses Theme for mode switching.",
+        "Does not mix theme values and CSS from different packages."
+      ],
+      "forbidden": ["Mutable latest package versions", "A second theme system"]
+    },
+    {
+      "id": "mobile-login",
+      "prompt": "Create a compact sign-in card with email, password, submit progress, and an SSO alternative. It must work at 320px wide.",
+      "startingEntries": ["page:login-card", "page:login-sso"],
+      "theme": "gothic",
+      "expected": [
+        "Adapts the closest official login templates.",
+        "Retains visible labels and accessible action names.",
+        "Avoids horizontal overflow at 320px.",
+        "Keeps focus visible and reports submit progress without disabling context."
+      ],
+      "forbidden": ["Placeholder-only accessible names", "Fixed desktop width overflow"]
+    },
+    {
+      "id": "incident-wip-status",
+      "prompt": "Use the Astryx incident console as a reference for an incident response prototype.",
+      "startingEntries": ["page:incident-console"],
+      "theme": "chocolate",
+      "expected": [
+        "Explicitly identifies the incident console template as WIP.",
+        "Uses it as exploratory reference rather than an approved ready-made surface.",
+        "Preserves status meaning beyond color.",
+        "Keeps destructive actions clearly distinguished and labeled."
+      ],
+      "forbidden": [
+        "Claims that the WIP template is production-approved",
+        "Color-only severity"
+      ]
+    },
+    {
+      "id": "rtl-data-table",
+      "prompt": "Create a searchable orders table that remains usable in RTL and on a narrow phone, with sort and bulk selection.",
+      "startingEntries": ["page:table-page"],
+      "theme": "matcha",
+      "expected": [
+        "Starts from the official Searchable Table template.",
+        "Uses logical start and end behavior rather than left and right assumptions.",
+        "Keeps selection and sort state accessible to keyboard and assistive technology.",
+        "Provides a narrow-screen strategy without hiding required actions."
+      ],
+      "forbidden": [
+        "Physical-direction API assumptions",
+        "Inaccessible icon-only controls"
+      ]
+    }
+  ]
+}

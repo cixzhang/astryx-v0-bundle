@@ -1,0 +1,6 @@
+packages:
+  - '.'
+
+allowBuilds:
+  '@astryxdesign/core': true
+  'sharp': true

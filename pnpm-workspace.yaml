@@ -1,0 +1,8 @@
+packages:
+  - '.'
+  - 'assets/starter'
+
+allowBuilds:
+  '@astryxdesign/cli': true
+  '@astryxdesign/core': true
+  'sharp': true

@@ -1,0 +1,14 @@
+.research
+node_modules
+assets/starter/.next
+dist
+examples/blocks
+examples/templates
+verification/src/generated
+examples/themes/custom/built
+pnpm-lock.yaml
+assets/starter/pnpm-lock.yaml
+catalog/astryx-0.6.3.json
+bundle.manifest.json
+examples/manifest.json
+references/template-index.md

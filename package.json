@@ -1,0 +1,69 @@
+{
+  "name": "astryx-v0-bundle",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public v0 Design Systems 2.0 bundle for Astryx",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@11.10.0",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "generate": "node scripts/sync-astryx-examples.mjs",
+    "generate:check": "node scripts/sync-astryx-examples.mjs --check",
+    "catalog:check": "node scripts/validate-bundle.mjs",
+    "urls:check": "node scripts/check-urls.mjs",
+    "skill:check": "npx --yes skills add . --list --yes",
+    "starter:clean": "node scripts/verify-clean-starter.mjs",
+    "theme:build": "node scripts/build-theme.mjs",
+    "theme:check": "node scripts/build-theme.mjs --check",
+    "lint": "eslint .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit && pnpm --dir assets/starter typecheck",
+    "test": "vitest run",
+    "build:verification": "vite build",
+    "build:starter": "pnpm --dir assets/starter build",
+    "build": "pnpm build:verification && pnpm build:starter",
+    "test:e2e": "pnpm build:verification && playwright test",
+    "validate": "pnpm catalog:check && pnpm generate:check && pnpm theme:check && pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "dependencies": {
+    "@astryxdesign/build": "0.6.3",
+    "@astryxdesign/cli": "0.6.3",
+    "@astryxdesign/core": "0.6.3",
+    "@astryxdesign/theme-butter": "0.6.3",
+    "@astryxdesign/theme-chocolate": "0.6.3",
+    "@astryxdesign/theme-gothic": "0.6.3",
+    "@astryxdesign/theme-matcha": "0.6.3",
+    "@astryxdesign/theme-neutral": "0.6.3",
+    "@astryxdesign/theme-stone": "0.6.3",
+    "@astryxdesign/theme-y2k": "0.6.3",
+    "@heroicons/react": "2.2.0",
+    "@stylexjs/stylex": "0.19.1",
+    "lucide-react": "1.18.0",
+    "react": "19.2.7",
+    "react-dom": "19.2.7",
+    "recharts": "3.9.2"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.61.1",
+    "@stylexjs/unplugin": "0.19.1",
+    "@types/node": "25.9.3",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "5.2.0",
+    "eslint": "10.6.0",
+    "globals": "17.4.0",
+    "prettier": "3.8.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.62.1",
+    "vite": "8.1.3",
+    "vitest": "4.1.11"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}
