@@ -26,6 +26,7 @@
     "build:starter": "pnpm --dir assets/starter build",
     "build": "pnpm build:verification && pnpm build:starter",
     "test:e2e": "pnpm build && playwright test",
+    "v0:verify-import": "node scripts/verify-live-v0-import.mjs",
     "validate": "pnpm catalog:check && pnpm generate:check && pnpm theme:check && pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm build"
   },
   "dependencies": {

@@ -8,6 +8,7 @@ dist/
 coverage/
 test-results/
 playwright-report/
+v0-import-evidence/
 *.tsbuildinfo
 
 # Local research and generated scratch
