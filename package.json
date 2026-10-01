@@ -25,7 +25,7 @@
     "build:verification": "vite build",
     "build:starter": "pnpm --dir assets/starter build",
     "build": "pnpm build:verification && pnpm build:starter",
-    "test:e2e": "pnpm build:verification && playwright test",
+    "test:e2e": "pnpm build && playwright test",
     "validate": "pnpm catalog:check && pnpm generate:check && pnpm theme:check && pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm build"
   },
   "dependencies": {

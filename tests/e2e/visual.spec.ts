@@ -16,7 +16,26 @@ async function openReady(
   );
 }
 
-test('representative desktop and mobile states render in real Chromium', async ({
+async function openStarter(page: Page, mode: 'light' | 'dark') {
+  await page.goto('http://127.0.0.1:4174', {waitUntil: 'domcontentloaded'});
+  await expect(page.getByRole('heading', {name: 'Build with Astryx'})).toBeVisible();
+
+  await page.getByLabel('Theme preset').click();
+  await page.getByRole('option', {name: 'Custom example', exact: true}).click();
+  await page.getByLabel('Color mode').click();
+  await page
+    .getByRole('option', {
+      name: mode === 'light' ? 'Light' : 'Dark',
+      exact: true,
+    })
+    .click();
+  await expect(page.locator('html')).toHaveAttribute('data-theme', mode);
+
+  await page.getByRole('button', {name: 'Save settings'}).click();
+  await expect(page.getByRole('button', {name: 'Saved 1 times'})).toBeVisible();
+}
+
+test('starter desktop and mobile states render in real Chromium', async ({
   page,
 }, testInfo) => {
   const captures: Buffer[] = [];
@@ -29,8 +48,7 @@ test('representative desktop and mobile states render in real Chromium', async (
 
   for (const state of states) {
     await page.setViewportSize({width: state.width, height: state.height});
-    await openReady(page, 'page:theme-showcase', 'custom', state.mode);
-    await expect(page.locator('[data-verification-frame]')).toBeVisible();
+    await openStarter(page, state.mode);
     const metrics = await page.evaluate(() => ({
       background: getComputedStyle(document.body).backgroundColor,
       foreground: getComputedStyle(document.body).color,
@@ -53,12 +71,19 @@ test('representative desktop and mobile states render in real Chromium', async (
   expect(hashes.size).toBe(captures.length);
 });
 
-test('representative component surface has no serious accessibility violations', async ({
+test('starter and representative component have no serious accessibility violations', async ({
   page,
 }) => {
+  await openStarter(page, 'light');
+  let results = await new AxeBuilder({page}).analyze();
+  let serious = results.violations.filter(
+    (violation) => violation.impact === 'serious' || violation.impact === 'critical',
+  );
+  expect(serious).toEqual([]);
+
   await openReady(page, 'component:actions', 'neutral', 'light');
-  const results = await new AxeBuilder({page}).analyze();
-  const serious = results.violations.filter(
+  results = await new AxeBuilder({page}).analyze();
+  serious = results.violations.filter(
     (violation) => violation.impact === 'serious' || violation.impact === 'critical',
   );
   expect(serious).toEqual([]);
