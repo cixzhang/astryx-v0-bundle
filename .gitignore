@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build and test output
+.next/
+dist/
+coverage/
+test-results/
+playwright-report/
+*.tsbuildinfo
+
+# Local research and generated scratch
+.research/
+.tmp/
+
+# Environment and editor files
+.env
+.env.*
+!.env.example
+.DS_Store
+.idea/
+.vscode/
