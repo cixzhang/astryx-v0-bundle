@@ -1,8 +1,9 @@
+@layer reset, astryx-base, astryx-theme;
+
 @import '@astryxdesign/core/reset.css';
 @import '@astryxdesign/core/astryx.css';
 @import '@astryxdesign/theme-neutral/theme.css';
 @import '@astryxdesign/theme-butter/theme.css';
-@import '@astryxdesign/theme-chocolate/theme.css';
 @import '@astryxdesign/theme-gothic/theme.css';
 @import '@astryxdesign/theme-matcha/theme.css';
 @import '@astryxdesign/theme-stone/theme.css';
@@ -13,6 +14,27 @@
 html,
 body {
   min-height: 100%;
+}
+
+/* Added briefly on theme or mode change so the whole page eases into the new look. */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition-property: background-color, color, border-color, outline-color, fill, stroke, box-shadow, border-radius !important;
+  transition-duration: 400ms !important;
+  transition-timing-function: ease !important;
+}
+
+/* Theme and mode changes reveal the new page in a growing circle (animated in AppProviders). */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-new(root) {
+  z-index: 1;
 }
 
 body {

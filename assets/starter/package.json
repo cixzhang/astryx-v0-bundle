@@ -2,7 +2,7 @@
   "name": "astryx-v0-starter",
   "version": "0.1.0",
   "private": true,
-  "packageManager": "pnpm@11.10.0",
+  "packageManager": "pnpm@12.3.4",
   "engines": {
     "node": ">=22.13.0"
   },
@@ -10,24 +10,26 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "next typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@astryxdesign/core": "0.6.3",
-    "@astryxdesign/theme-butter": "0.6.3",
-    "@astryxdesign/theme-chocolate": "0.6.3",
-    "@astryxdesign/theme-gothic": "0.6.3",
-    "@astryxdesign/theme-matcha": "0.6.3",
-    "@astryxdesign/theme-neutral": "0.6.3",
-    "@astryxdesign/theme-stone": "0.6.3",
-    "@astryxdesign/theme-y2k": "0.6.3",
+    "@astryxdesign/core": "0.7.0",
+    "@astryxdesign/theme-butter": "0.7.0",
+    "@astryxdesign/theme-gothic": "0.7.0",
+    "@astryxdesign/theme-matcha": "0.7.0",
+    "@astryxdesign/theme-neutral": "0.7.0",
+    "@astryxdesign/theme-stone": "0.7.0",
+    "@astryxdesign/theme-y2k": "0.7.0",
     "@heroicons/react": "2.2.0",
     "@stylexjs/stylex": "0.19.1",
-    "next": "15.5.21",
+    "next": "16.3.8",
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.7",
+    "recharts": "3.9.2"
   },
   "devDependencies": {
+    "@astryxdesign/cli": "0.7.0",
+    "@babel/core": "7.29.7",
     "@stylexjs/babel-plugin": "0.19.1",
     "@stylexjs/postcss-plugin": "0.19.1",
     "@types/node": "25.9.3",

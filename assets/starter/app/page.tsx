@@ -1,125 +1,168 @@
 'use client';
 
-import {useState} from 'react';
-import {Badge} from '@astryxdesign/core/Badge';
-import {Banner} from '@astryxdesign/core/Banner';
-import {Button} from '@astryxdesign/core/Button';
-import {Card} from '@astryxdesign/core/Card';
-import {CheckboxInput} from '@astryxdesign/core/CheckboxInput';
+import type {ComponentType} from 'react';
+import * as stylex from '@stylexjs/stylex';
 import {Grid} from '@astryxdesign/core/Grid';
-import {Layout, LayoutContent, Stack} from '@astryxdesign/core/Layout';
-import {Selector} from '@astryxdesign/core/Selector';
-import {Heading, Text} from '@astryxdesign/core/Text';
-import {TextInput} from '@astryxdesign/core/TextInput';
-import type {ThemeMode} from '@astryxdesign/core/theme';
-import {Providers} from './providers';
-import {themeCatalog, type ThemeName} from './theme-catalog';
+import {Layout, LayoutContent, VStack} from '@astryxdesign/core/Layout';
+import {VisuallyHidden} from '@astryxdesign/core/VisuallyHidden';
+import {FloatingToolbar} from '@/components/floating-toolbar';
+import {CalendarCard} from '@/components/home/calendar-card';
+import {ChatCard} from '@/components/home/chat-card';
+import {CheckoutCard} from '@/components/home/checkout-card';
+import {CodeEditorCard} from '@/components/home/code-editor-card';
+import {OrderSummaryCard} from '@/components/home/order-summary-card';
+import {CreatorCard} from '@/components/home/creator-card';
+import {LoanCard} from '@/components/home/loan-card';
+import {RevenueCard} from '@/components/home/revenue-card';
+import {DemoStateProvider} from '@/components/home/demo-state';
+import {FileTreeCard} from '@/components/home/file-tree-card';
+import {HeroLogo} from '@/components/home/hero-logo';
+import {EmptyStateCard} from '@/components/home/empty-state-card';
+import {LoadingStatesCard} from '@/components/home/loading-states-card';
+import {EmailAlertsCard} from '@/components/home/email-alerts-card';
+import {OnboardingCard} from '@/components/home/onboarding-card';
+import {PlanCard} from '@/components/home/plan-card';
+import {ProductCard} from '@/components/home/product-card';
+import {ProjectCard} from '@/components/home/project-card';
+import {ShortcutsCard} from '@/components/home/shortcuts-card';
+import {TasksTableCard} from '@/components/home/tasks-table-card';
 
-const themeOptions = Object.keys(themeCatalog).map((value) => ({
-  value,
-  label:
-    value === 'custom' ? 'Custom example' : value[0].toUpperCase() + value.slice(1),
-}));
-const modeOptions = ['system', 'light', 'dark'].map((value) => ({
-  value,
-  label: value[0].toUpperCase() + value.slice(1),
-}));
+const WIDE = '@media (min-width: 1400px)';
+const THREE_UP = '@media (min-width: 1000px)';
+const TWO_UP = '@media (min-width: 720px)';
+const pageWidth = 1640;
+
+// Fixed page gutters and gaps so the controls and the card edges stay put across themes.
+const styles = stylex.create({
+  gutters: {
+    boxSizing: 'border-box',
+    width: '100%',
+    maxWidth: pageWidth,
+    marginInline: 'auto',
+    paddingInline: 24,
+    paddingTop: 24,
+    // Room for the floating toolbar so the last cards are never covered.
+    paddingBottom: 120,
+  },
+  // Wide: outer | hero + two center columns | outer. Three-up: hero across the top,
+  // Tasks + Editor over two columns beside the right column. Two-up: hero, wide, pairs.
+  collage: {
+    gridTemplateColumns: {
+      default: 'minmax(0, 1fr)',
+      [TWO_UP]: 'repeat(2, minmax(0, 1fr))',
+      [THREE_UP]: 'repeat(3, minmax(0, 1fr))',
+      [WIDE]: 'repeat(4, minmax(0, 1fr))',
+    },
+    // Below THREE_UP the full-width Tasks and Editor cards sit above the card
+    // columns, so uneven column lengths only show at the page end, never mid-page.
+    gridTemplateAreas: {
+      default: '"top" "pairA" "pairB" "wide"',
+      [TWO_UP]: '"top top" "wide wide" "pairA pairB"',
+      [THREE_UP]: '"top top top" "wide wide right" "left a right" "left b right"',
+      [WIDE]: '"left top top right" "left wide wide right" "left a b right"',
+    },
+    // Rows hug their content so the spanning outer columns don't stretch the hero row.
+    gridTemplateRows: {
+      default: 'auto',
+      [THREE_UP]: 'auto auto auto 1fr',
+      [WIDE]: 'auto auto 1fr',
+    },
+  },
+  // Below THREE_UP each pair stacks as one continuous column so a short card
+  // never leaves a row-height gap; from THREE_UP up the pair dissolves into the grid.
+  pair: {
+    display: {default: null, [THREE_UP]: 'contents'},
+  },
+  pairA: {gridArea: 'pairA'},
+  pairB: {gridArea: 'pairB'},
+  left: {gridArea: 'left'},
+  right: {gridArea: 'right'},
+  top: {gridArea: 'top'},
+  wide: {gridArea: 'wide'},
+  a: {gridArea: 'a'},
+  b: {gridArea: 'b'},
+});
+
+interface CardEntry {
+  file: string;
+  Component: ComponentType;
+}
+
+// Columns are loosely grouped by theme and balanced so all four end at about the same height.
+const workAndData: CardEntry[] = [
+  {file: 'revenue-card', Component: RevenueCard},
+  {file: 'project-card', Component: ProjectCard},
+  {file: 'shortcuts-card', Component: ShortcutsCard},
+];
+
+const peopleAndStates: CardEntry[] = [
+  {file: 'creator-card', Component: CreatorCard},
+  {file: 'loading-states-card', Component: LoadingStatesCard},
+  {file: 'empty-state-card', Component: EmptyStateCard},
+];
+
+const commerce: CardEntry[] = [
+  {file: 'product-card', Component: ProductCard},
+  {file: 'order-summary-card', Component: OrderSummaryCard},
+  {file: 'checkout-card', Component: CheckoutCard},
+  {file: 'plan-card', Component: PlanCard},
+  {file: 'onboarding-card', Component: OnboardingCard},
+];
+
+const communicationAndMedia: CardEntry[] = [
+  {file: 'chat-card', Component: ChatCard},
+  {file: 'calendar-card', Component: CalendarCard},
+  {file: 'loan-card', Component: LoanCard},
+  {file: 'email-alerts-card', Component: EmailAlertsCard},
+  {file: 'file-tree-card', Component: FileTreeCard},
+];
+
+function CardColumn({cards, xstyle}: {cards: CardEntry[]; xstyle?: stylex.StyleXStyles}) {
+  return (
+    <VStack gap={5} xstyle={xstyle}>
+      {cards.map(({file, Component}) => (
+        <Component key={file} />
+      ))}
+    </VStack>
+  );
+}
 
 export default function Home() {
-  const [themeName, setThemeName] = useState<ThemeName>('neutral');
-  const [mode, setMode] = useState<ThemeMode>('system');
-  const [projectName, setProjectName] = useState('Astryx workspace');
-  const [updatesEnabled, setUpdatesEnabled] = useState(true);
-  const [savedCount, setSavedCount] = useState(0);
-
   return (
-    <Providers theme={themeCatalog[themeName]} mode={mode}>
+    <DemoStateProvider>
       <Layout
         height="auto"
+        contentWidth={pageWidth}
         content={
-          <LayoutContent padding={4}>
-            <Stack direction="vertical" gap={4}>
-              <Stack direction="vertical" gap={2}>
-                <Badge label="v0 Design Systems 2.0" variant="info" />
-                <Heading level={1}>Build with Astryx</Heading>
-                <Text type="large" color="secondary">
-                  This starter verifies package setup, public themes, controlled inputs,
-                  responsive layout, and accessible actions before v0 adds
-                  product-specific UI.
-                </Text>
-              </Stack>
-
-              <Banner
-                status="success"
-                title="Astryx 0.6.3 is installed"
-                description="The starter uses public packages and a pinned public source reference."
-              />
-
-              <Grid columns={{minWidth: 260}} gap={4}>
-                <Card>
-                  <Stack direction="vertical" gap={3}>
-                    <Heading level={3}>Theme</Heading>
-                    <Selector
-                      label="Theme preset"
-                      value={themeName}
-                      onChange={(value) => setThemeName(value as ThemeName)}
-                      options={themeOptions}
-                    />
-                    <Selector
-                      label="Color mode"
-                      value={mode}
-                      onChange={(value) => setMode(value as ThemeMode)}
-                      options={modeOptions}
-                    />
-                    <Text type="supporting" color="secondary">
-                      The custom option uses defineTheme; presets use built values and
-                      matching CSS.
-                    </Text>
-                  </Stack>
-                </Card>
-
-                <Card>
-                  <Stack direction="vertical" gap={3}>
-                    <Heading level={3}>Controlled form</Heading>
-                    <TextInput
-                      label="Project name"
-                      value={projectName}
-                      onChange={setProjectName}
-                    />
-                    <CheckboxInput
-                      label="Send progress updates"
-                      value={updatesEnabled}
-                      onChange={setUpdatesEnabled}
-                    />
-                    <Button
-                      label={
-                        savedCount === 0 ? 'Save settings' : `Saved ${savedCount} times`
-                      }
-                      variant="primary"
-                      onClick={() => setSavedCount((count) => count + 1)}
-                    />
-                  </Stack>
-                </Card>
-
-                <Card>
-                  <Stack direction="vertical" gap={3}>
-                    <Heading level={3}>Ready for a prompt</Heading>
-                    <Text type="body">
-                      Ask v0 for an official page template, a component block, or a
-                      custom theme. The skill points to versioned source and exact
-                      package declarations.
-                    </Text>
-                    <Stack direction="horizontal" gap={2}>
-                      <Button label="Primary action" variant="primary" />
-                      <Button label="Secondary" variant="secondary" />
-                    </Stack>
-                  </Stack>
-                </Card>
-              </Grid>
-            </Stack>
+          <LayoutContent padding={0}>
+            <VStack xstyle={styles.gutters}>
+              <main>
+                <VisuallyHidden>
+                  <p>A collage of example cards built with the Astryx design system.</p>
+                </VisuallyHidden>
+                <Grid gap={5} align="start" xstyle={styles.collage}>
+                  <VStack xstyle={styles.top}>
+                    <HeroLogo />
+                  </VStack>
+                  <VStack gap={5} xstyle={styles.wide}>
+                    <TasksTableCard />
+                    <CodeEditorCard />
+                  </VStack>
+                  <VStack gap={5} xstyle={[styles.pair, styles.pairA]}>
+                    <CardColumn cards={workAndData} xstyle={styles.a} />
+                    <CardColumn cards={commerce} xstyle={styles.left} />
+                  </VStack>
+                  <VStack gap={5} xstyle={[styles.pair, styles.pairB]}>
+                    <CardColumn cards={peopleAndStates} xstyle={styles.b} />
+                    <CardColumn cards={communicationAndMedia} xstyle={styles.right} />
+                  </VStack>
+                </Grid>
+              </main>
+              <FloatingToolbar />
+            </VStack>
           </LayoutContent>
         }
       />
-    </Providers>
+    </DemoStateProvider>
   );
 }
