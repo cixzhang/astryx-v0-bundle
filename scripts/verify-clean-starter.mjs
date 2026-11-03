@@ -28,7 +28,7 @@ try {
       !item.includes(`${path.sep}node_modules`) &&
       !item.endsWith('.tsbuildinfo'),
   });
-  run('pnpm', ['install', '--frozen-lockfile=false']);
+  run('pnpm', ['install', '--no-frozen-lockfile']);
   run('pnpm', ['typecheck']);
   run('pnpm', ['build']);
   console.log(`Clean starter verified in ${temporaryDirectory}.`);
