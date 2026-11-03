@@ -37,7 +37,6 @@ const suggestions = [
   {label: 'Analytics', icon: ChartBarIcon},
 ];
 
-
 const cannedReplies = [
   'Good idea. I would build that with Astryx `Card`, `Table`, and `Button` so it picks up the theme automatically.',
   'Sure. Try switching themes in the toolbar, and every component here updates with no extra code.',
@@ -83,7 +82,8 @@ export function ChatCard() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [draft, setDraft] = useState('');
   const dictation = useSpeechRecognition({
-    onResult: (transcript) => setDraft((current) => (current ? `${current} ${transcript}` : transcript)),
+    onResult: (transcript) =>
+      setDraft((current) => (current ? `${current} ${transcript}` : transcript)),
   });
 
   function handleSubmit(value: string) {
@@ -125,7 +125,12 @@ export function ChatCard() {
         elevation="none"
         density="balanced"
         footerActions={
-          <Button label="Attach" variant="ghost" isIconOnly icon={<Icon icon={PlusIcon} size="sm" />} />
+          <Button
+            label="Attach"
+            variant="ghost"
+            isIconOnly
+            icon={<Icon icon={PlusIcon} size="sm" />}
+          />
         }
         sendActions={<ChatDictationButton dictation={dictation} />}
       />
@@ -141,9 +146,19 @@ export function ChatCard() {
       <VStack xstyle={styles.body}>
         <ChatLayout composer={composer}>
           {messages.length === 0 ? (
-            <VStack gap={1} padding={5} hAlign="center" vAlign="center" xstyle={styles.greeting}>
-              <Heading level={2} xstyle={styles.centerText}>How can I help you today?</Heading>
-              <Text color="secondary" xstyle={styles.centerText}>Pick a starting point or ask anything.</Text>
+            <VStack
+              gap={1}
+              padding={5}
+              hAlign="center"
+              vAlign="center"
+              xstyle={styles.greeting}
+            >
+              <Heading level={2} xstyle={styles.centerText}>
+                How can I help you today?
+              </Heading>
+              <Text color="secondary" xstyle={styles.centerText}>
+                Pick a starting point or ask anything.
+              </Text>
             </VStack>
           ) : (
             <ChatMessageList>

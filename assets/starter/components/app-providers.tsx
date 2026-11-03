@@ -116,7 +116,10 @@ export function AppProviders({children}: {children: ReactNode}) {
     const root = document.documentElement;
     root.classList.add(TRANSITION_CLASS);
     window.clearTimeout(transitionTimer.current);
-    transitionTimer.current = window.setTimeout(() => root.classList.remove(TRANSITION_CLASS), TRANSITION_MS);
+    transitionTimer.current = window.setTimeout(
+      () => root.classList.remove(TRANSITION_CLASS),
+      TRANSITION_MS,
+    );
     update();
   }, []);
 
@@ -150,7 +153,14 @@ export function AppProviders({children}: {children: ReactNode}) {
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
-      if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey || event.defaultPrevented) return;
+      if (
+        event.altKey ||
+        event.ctrlKey ||
+        event.metaKey ||
+        event.shiftKey ||
+        event.defaultPrevented
+      )
+        return;
       const target = event.target as HTMLElement | null;
       if (target?.closest(ARROW_KEY_OWNERS)) return;
       event.preventDefault();

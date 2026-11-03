@@ -122,12 +122,12 @@ export function OrderSummaryCard() {
         <Banner
           status={totals.isFreeShipping ? 'success' : 'info'}
           icon={
-              <Icon
-                icon={TruckIcon}
-                size="md"
-                color={totals.isFreeShipping ? 'success' : 'accent'}
-              />
-            }
+            <Icon
+              icon={TruckIcon}
+              size="md"
+              color={totals.isFreeShipping ? 'success' : 'accent'}
+            />
+          }
           title={
             totals.isFreeShipping
               ? 'You’ve unlocked free shipping'

@@ -29,27 +29,27 @@ describe('bundle contract', () => {
     expect(v0.referenceWorkspace.sources).toHaveLength(1);
     expect(v0.referenceWorkspace.sources[0]).toMatchObject({
       type: 'github-repo',
-      ref: 'v0.6.3',
+      ref: 'v0.7.0',
     });
     expect(v0.starter).toEqual({source: 'skill-directory', path: 'assets/starter'});
   });
 
   test('accounts for the complete pinned template and theme surface', async () => {
-    const catalog = await readJson<Catalog>('catalog/astryx-0.6.3.json');
+    const catalog = await readJson<Catalog>('catalog/astryx-0.7.0.json');
     expect(
       catalog.templates.filter((entry) => entry.kind === 'page-template'),
-    ).toHaveLength(54);
+    ).toHaveLength(57);
     expect(
       catalog.templates.filter((entry) => entry.kind === 'block-template'),
-    ).toHaveLength(646);
-    expect(new Set(catalog.templates.map((entry) => entry.id)).size).toBe(700);
+    ).toHaveLength(661);
+    expect(new Set(catalog.templates.map((entry) => entry.id)).size).toBe(718);
     expect(catalog.themes).toHaveLength(15);
     expect(catalog.components).toHaveLength(8);
   });
 
   test('keeps every generated entry content-addressed', async () => {
     const manifest = await readJson<BundleManifest>('bundle.manifest.json');
-    expect(manifest.entries).toHaveLength(700);
+    expect(manifest.entries).toHaveLength(718);
     for (const entry of manifest.entries) {
       const source = await readFile(path.join(root, entry.path));
       expect(createHash('sha256').update(source).digest('hex'), entry.id).toBe(

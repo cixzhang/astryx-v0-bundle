@@ -1,8 +1,8 @@
 # Astryx for v0
 
-A public [v0 Design Systems 2.0](https://v0.app/docs/design-systems-2) bundle for [Astryx](https://github.com/facebook/astryx), pinned to the public `0.6.3` release.
+A public [v0 Design Systems 2.0](https://v0.app/docs/design-systems-2) bundle for [Astryx](https://github.com/facebook/astryx), pinned to the public `0.7.0` release.
 
-It gives v0 a verified Next.js starter, exact package and provider setup, all seven public themes, a custom-theme workflow, all 54 public page templates, all 646 public block templates, and representative component examples. It consumes public `@astryxdesign/*` packages instead of forking component implementations.
+It gives v0 a verified Next.js starter, exact package and provider setup, all seven public themes, a custom-theme workflow, all 57 public page templates, all 661 public block templates, and representative component examples. It consumes public `@astryxdesign/*` packages instead of forking component implementations.
 
 ## Before this becomes official
 
@@ -27,12 +27,12 @@ npx --yes skills add cixzhang/astryx-v0-bundle --list --yes
 
 - `SKILL.md` — focused agent instructions and accessibility rules
 - `v0.json` — schema version 1, a tag-pinned public source, and the starter
-- `assets/starter/` — a clean-installable Next.js 15 and React 19 app
-- `examples/templates/` — all 54 public page templates
-- `examples/blocks/` — all 646 public block templates
+- `assets/starter/` — a clean-installable Next.js 16 and React 19 app
+- `examples/templates/` — all 57 public page templates
+- `examples/blocks/` — all 661 public block templates
 - `examples/themes/` — every public preset plus runtime, built, media, and syntax theming
 - `examples/components/` — curated official component showcases
-- `catalog/astryx-0.6.3.json` — exhaustive source, dependency, rationale, status, and done-criteria ledger
+- `catalog/astryx-0.7.0.json` — exhaustive source, dependency, rationale, status, and done-criteria ledger
 - `evals/cases.json` — release-gating v0 prompt and review rubric
 
 Generated examples use the public Astryx CLI's supported asset adaptation. Binary template assets are not copied; images use self-contained placeholders and videos use an empty source until product media is supplied.
@@ -49,7 +49,7 @@ pnpm exec playwright install chromium
 pnpm test:e2e
 ```
 
-The checks validate the v0 contract, deterministic generation and hashes, all target paths, custom-theme artifacts, public-only hygiene, formatting, lint, types, unit tests, the verification gallery, the starter production build, concrete public URLs, a clean temporary starter install, and the skill parser. Linux Chromium mounts all 700 template entries and captures representative desktop/mobile light/dark pixels.
+The checks validate the v0 contract, deterministic generation and hashes, all target paths, custom-theme artifacts, public-only hygiene, formatting, lint, types, unit tests, the verification gallery, the starter production build, concrete public URLs, a clean temporary starter install, and the skill parser. Linux Chromium mounts all 718 template entries and captures representative desktop/mobile light/dark pixels.
 
 See [`docs/ledger.md`](docs/ledger.md) for locked scope and provenance, [`references/maintenance.md`](references/maintenance.md) for the update process, and [`evals/README.md`](evals/README.md) for v0 eval grading.
 

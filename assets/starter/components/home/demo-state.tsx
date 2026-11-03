@@ -89,14 +89,20 @@ export function DemoStateProvider({children}: {children: ReactNode}) {
         setCart((entries) =>
           entries.map((entry) =>
             entry.slot === slot
-              ? {...entry, quantity: Math.min(MAX_QUANTITY, Math.max(1, Math.round(quantity)))}
+              ? {
+                  ...entry,
+                  quantity: Math.min(MAX_QUANTITY, Math.max(1, Math.round(quantity))),
+                }
               : entry,
           ),
         ),
-      removeFromCart: (slot) => setCart((entries) => entries.filter((entry) => entry.slot !== slot)),
+      removeFromCart: (slot) =>
+        setCart((entries) => entries.filter((entry) => entry.slot !== slot)),
       clearCart: () => setCart([]),
     };
   }, [offsiteDates, isOffsiteReserved, isProjectArchived, cart, themeName]);
 
-  return <DemoStateContext.Provider value={value}>{children}</DemoStateContext.Provider>;
+  return (
+    <DemoStateContext.Provider value={value}>{children}</DemoStateContext.Provider>
+  );
 }

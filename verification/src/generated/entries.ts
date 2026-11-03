@@ -1647,6 +1647,20 @@ export const entryMetadata = [
     "path": "examples/blocks/components/DropdownMenu/DropdownMenuBottomSheet.tsx"
   },
   {
+    "id": "block:DropdownMenuGroupShowcase",
+    "kind": "block-template",
+    "name": "Dropdown Menu Group",
+    "status": "ready",
+    "path": "examples/blocks/components/DropdownMenuGroup/DropdownMenuGroupShowcase.tsx"
+  },
+  {
+    "id": "block:DropdownMenuGroupWithSelectable",
+    "kind": "block-template",
+    "name": "DropdownMenuGroup — Selectable rows",
+    "status": "ready",
+    "path": "examples/blocks/components/DropdownMenuGroup/DropdownMenuGroupWithSelectable.tsx"
+  },
+  {
     "id": "block:DropdownMenuItemBasic",
     "kind": "block-template",
     "name": "DropdownMenuItem — Basic",
@@ -2065,6 +2079,13 @@ export const entryMetadata = [
     "name": "Item — Basic",
     "status": "ready",
     "path": "examples/blocks/components/Item/ItemBasicItem.tsx"
+  },
+  {
+    "id": "block:ItemDocumentTabs",
+    "kind": "block-template",
+    "name": "Item — Document Tabs",
+    "status": "ready",
+    "path": "examples/blocks/components/Item/ItemDocumentTabs.tsx"
   },
   {
     "id": "block:ItemShowcase",
@@ -2942,6 +2963,48 @@ export const entryMetadata = [
     "path": "examples/blocks/components/Resizable/ResizableSidebar.tsx"
   },
   {
+    "id": "block:ScrollableAreaInlineRail",
+    "kind": "block-template",
+    "name": "Scrollable Area — Inline Rail",
+    "status": "ready",
+    "path": "examples/blocks/components/ScrollableArea/ScrollableAreaInlineRail.tsx"
+  },
+  {
+    "id": "block:ScrollableAreaOverscrollChaining",
+    "kind": "block-template",
+    "name": "Scrollable Area — Overscroll",
+    "status": "ready",
+    "path": "examples/blocks/components/ScrollableArea/ScrollableAreaOverscrollChaining.tsx"
+  },
+  {
+    "id": "block:ScrollableAreaShowcase",
+    "kind": "block-template",
+    "name": "Scrollable Area",
+    "status": "ready",
+    "path": "examples/blocks/components/ScrollableArea/ScrollableAreaShowcase.tsx"
+  },
+  {
+    "id": "block:ScrollableAreaStickyGroupHeaders",
+    "kind": "block-template",
+    "name": "Scrollable Area — Sticky Section Labels",
+    "status": "ready",
+    "path": "examples/blocks/components/ScrollableArea/ScrollableAreaStickyGroupHeaders.tsx"
+  },
+  {
+    "id": "block:ScrollableAreaStickyPassthrough",
+    "kind": "block-template",
+    "name": "Scrollable Area — Sticky Passthrough",
+    "status": "ready",
+    "path": "examples/blocks/components/ScrollableArea/ScrollableAreaStickyPassthrough.tsx"
+  },
+  {
+    "id": "block:ScrollableAreaTwoAxisBoard",
+    "kind": "block-template",
+    "name": "Scrollable Area — Two-Axis Board",
+    "status": "ready",
+    "path": "examples/blocks/components/ScrollableArea/ScrollableAreaTwoAxisBoard.tsx"
+  },
+  {
     "id": "block:SectionVariants",
     "kind": "block-template",
     "name": "Section — Variants",
@@ -3474,6 +3537,13 @@ export const entryMetadata = [
     "path": "examples/blocks/components/SyntaxTheme/SyntaxThemeShowcase.tsx"
   },
   {
+    "id": "block:TableBulkActionsTable",
+    "kind": "block-template",
+    "name": "Table: Bulk Actions",
+    "status": "ready",
+    "path": "examples/blocks/components/Table/TableBulkActionsTable.tsx"
+  },
+  {
     "id": "block:TableColumnSettingsTable",
     "kind": "block-template",
     "name": "Table — Column Settings",
@@ -3486,6 +3556,13 @@ export const entryMetadata = [
     "name": "Table — Popover Filters",
     "status": "ready",
     "path": "examples/blocks/components/Table/TableFilterableTable.tsx"
+  },
+  {
+    "id": "block:TableFloatingBulkActionsTable",
+    "kind": "block-template",
+    "name": "Table: Floating Bulk Actions",
+    "status": "ready",
+    "path": "examples/blocks/components/Table/TableFloatingBulkActionsTable.tsx"
   },
   {
     "id": "block:TableGridDividersTable",
@@ -3913,6 +3990,34 @@ export const entryMetadata = [
     "name": "TimeInput — States",
     "status": "ready",
     "path": "examples/blocks/components/TimeInput/TimeInputStates.tsx"
+  },
+  {
+    "id": "block:TimerFormats",
+    "kind": "block-template",
+    "name": "Timer — Formats",
+    "status": "ready",
+    "path": "examples/blocks/components/Timer/TimerFormats.tsx"
+  },
+  {
+    "id": "block:TimerInline",
+    "kind": "block-template",
+    "name": "Timer — Inline",
+    "status": "ready",
+    "path": "examples/blocks/components/Timer/TimerInline.tsx"
+  },
+  {
+    "id": "block:TimerShowcase",
+    "kind": "block-template",
+    "name": "Timer",
+    "status": "ready",
+    "path": "examples/blocks/components/Timer/TimerShowcase.tsx"
+  },
+  {
+    "id": "block:TimerTypography",
+    "kind": "block-template",
+    "name": "Timer — Typography",
+    "status": "ready",
+    "path": "examples/blocks/components/Timer/TimerTypography.tsx"
   },
   {
     "id": "block:TimestampAutoFormat",
@@ -4916,6 +5021,20 @@ export const entryMetadata = [
     "path": "examples/templates/table/page.tsx"
   },
   {
+    "id": "page:table-collapsible",
+    "kind": "page-template",
+    "name": "Collapsible Table",
+    "status": "ready",
+    "path": "examples/templates/table-collapsible/page.tsx"
+  },
+  {
+    "id": "page:table-comparison",
+    "kind": "page-template",
+    "name": "Comparison Table",
+    "status": "ready",
+    "path": "examples/templates/table-comparison/page.tsx"
+  },
+  {
     "id": "page:table-filter",
     "kind": "page-template",
     "name": "Filterable Table",
@@ -4942,6 +5061,13 @@ export const entryMetadata = [
     "name": "Searchable Table",
     "status": "ready",
     "path": "examples/templates/table-page/page.tsx"
+  },
+  {
+    "id": "page:table-tree",
+    "kind": "page-template",
+    "name": "Tree Table",
+    "status": "ready",
+    "path": "examples/templates/table-tree/page.tsx"
   },
   {
     "id": "page:theme-showcase",
@@ -5195,6 +5321,8 @@ export const entryLoaders = {
   "block:DividerVertical": () => import("../../../examples/blocks/components/Divider/DividerVertical.tsx"),
   "block:DropdownMenuActions": () => import("../../../examples/blocks/components/DropdownMenu/DropdownMenuActions.tsx"),
   "block:DropdownMenuBottomSheet": () => import("../../../examples/blocks/components/DropdownMenu/DropdownMenuBottomSheet.tsx"),
+  "block:DropdownMenuGroupShowcase": () => import("../../../examples/blocks/components/DropdownMenuGroup/DropdownMenuGroupShowcase.tsx"),
+  "block:DropdownMenuGroupWithSelectable": () => import("../../../examples/blocks/components/DropdownMenuGroup/DropdownMenuGroupWithSelectable.tsx"),
   "block:DropdownMenuItemBasic": () => import("../../../examples/blocks/components/DropdownMenuItem/DropdownMenuItemBasic.tsx"),
   "block:DropdownMenuItemShowcase": () => import("../../../examples/blocks/components/DropdownMenuItem/DropdownMenuItemShowcase.tsx"),
   "block:DropdownMenuNoChevron": () => import("../../../examples/blocks/components/DropdownMenu/DropdownMenuNoChevron.tsx"),
@@ -5255,6 +5383,7 @@ export const entryLoaders = {
   "block:InternationalizationProvider02Overrides": () => import("../../../examples/blocks/components/InternationalizationProvider/InternationalizationProvider02Overrides.tsx"),
   "block:InternationalizationProvider03RtlDirection": () => import("../../../examples/blocks/components/InternationalizationProvider/InternationalizationProvider03RtlDirection.tsx"),
   "block:ItemBasicItem": () => import("../../../examples/blocks/components/Item/ItemBasicItem.tsx"),
+  "block:ItemDocumentTabs": () => import("../../../examples/blocks/components/Item/ItemDocumentTabs.tsx"),
   "block:ItemShowcase": () => import("../../../examples/blocks/components/Item/ItemShowcase.tsx"),
   "block:ItemWithMedia": () => import("../../../examples/blocks/components/Item/ItemWithMedia.tsx"),
   "block:ItemWithMetadata": () => import("../../../examples/blocks/components/Item/ItemWithMetadata.tsx"),
@@ -5380,6 +5509,12 @@ export const entryLoaders = {
   "block:RadioListWithValidation": () => import("../../../examples/blocks/components/RadioList/RadioListWithValidation.tsx"),
   "block:ResizableShowcase": () => import("../../../examples/blocks/components/Resizable/ResizableShowcase.tsx"),
   "block:ResizableSidebar": () => import("../../../examples/blocks/components/Resizable/ResizableSidebar.tsx"),
+  "block:ScrollableAreaInlineRail": () => import("../../../examples/blocks/components/ScrollableArea/ScrollableAreaInlineRail.tsx"),
+  "block:ScrollableAreaOverscrollChaining": () => import("../../../examples/blocks/components/ScrollableArea/ScrollableAreaOverscrollChaining.tsx"),
+  "block:ScrollableAreaShowcase": () => import("../../../examples/blocks/components/ScrollableArea/ScrollableAreaShowcase.tsx"),
+  "block:ScrollableAreaStickyGroupHeaders": () => import("../../../examples/blocks/components/ScrollableArea/ScrollableAreaStickyGroupHeaders.tsx"),
+  "block:ScrollableAreaStickyPassthrough": () => import("../../../examples/blocks/components/ScrollableArea/ScrollableAreaStickyPassthrough.tsx"),
+  "block:ScrollableAreaTwoAxisBoard": () => import("../../../examples/blocks/components/ScrollableArea/ScrollableAreaTwoAxisBoard.tsx"),
   "block:SectionVariants": () => import("../../../examples/blocks/components/Section/SectionVariants.tsx"),
   "block:SectionWashHighlight": () => import("../../../examples/blocks/components/Section/SectionWashHighlight.tsx"),
   "block:SectionWithDividers": () => import("../../../examples/blocks/components/Section/SectionWithDividers.tsx"),
@@ -5456,8 +5591,10 @@ export const entryLoaders = {
   "block:SyntaxThemeDarkPreset": () => import("../../../examples/blocks/components/SyntaxTheme/SyntaxThemeDarkPreset.tsx"),
   "block:SyntaxThemeLightPreset": () => import("../../../examples/blocks/components/SyntaxTheme/SyntaxThemeLightPreset.tsx"),
   "block:SyntaxThemeShowcase": () => import("../../../examples/blocks/components/SyntaxTheme/SyntaxThemeShowcase.tsx"),
+  "block:TableBulkActionsTable": () => import("../../../examples/blocks/components/Table/TableBulkActionsTable.tsx"),
   "block:TableColumnSettingsTable": () => import("../../../examples/blocks/components/Table/TableColumnSettingsTable.tsx"),
   "block:TableFilterableTable": () => import("../../../examples/blocks/components/Table/TableFilterableTable.tsx"),
+  "block:TableFloatingBulkActionsTable": () => import("../../../examples/blocks/components/Table/TableFloatingBulkActionsTable.tsx"),
   "block:TableGridDividersTable": () => import("../../../examples/blocks/components/Table/TableGridDividersTable.tsx"),
   "block:TableGroupedRowsTable": () => import("../../../examples/blocks/components/Table/TableGroupedRowsTable.tsx"),
   "block:TableInCard": () => import("../../../examples/blocks/components/Table/TableInCard.tsx"),
@@ -5519,6 +5656,10 @@ export const entryLoaders = {
   "block:TimeInputIncrement": () => import("../../../examples/blocks/components/TimeInput/TimeInputIncrement.tsx"),
   "block:TimeInputShowcase": () => import("../../../examples/blocks/components/TimeInput/TimeInputShowcase.tsx"),
   "block:TimeInputStates": () => import("../../../examples/blocks/components/TimeInput/TimeInputStates.tsx"),
+  "block:TimerFormats": () => import("../../../examples/blocks/components/Timer/TimerFormats.tsx"),
+  "block:TimerInline": () => import("../../../examples/blocks/components/Timer/TimerInline.tsx"),
+  "block:TimerShowcase": () => import("../../../examples/blocks/components/Timer/TimerShowcase.tsx"),
+  "block:TimerTypography": () => import("../../../examples/blocks/components/Timer/TimerTypography.tsx"),
   "block:TimestampAutoFormat": () => import("../../../examples/blocks/components/Timestamp/TimestampAutoFormat.tsx"),
   "block:TimestampColors": () => import("../../../examples/blocks/components/Timestamp/TimestampColors.tsx"),
   "block:TimestampFormats": () => import("../../../examples/blocks/components/Timestamp/TimestampFormats.tsx"),
@@ -5662,10 +5803,13 @@ export const entryLoaders = {
   "page:shell-top-nav": () => import("../../../examples/templates/shell-top-nav/page.tsx"),
   "page:side-gallery": () => import("../../../examples/templates/side-gallery/page.tsx"),
   "page:table": () => import("../../../examples/templates/table/page.tsx"),
+  "page:table-collapsible": () => import("../../../examples/templates/table-collapsible/page.tsx"),
+  "page:table-comparison": () => import("../../../examples/templates/table-comparison/page.tsx"),
   "page:table-filter": () => import("../../../examples/templates/table-filter/page.tsx"),
   "page:table-grouped": () => import("../../../examples/templates/table-grouped/page.tsx"),
   "page:table-inbox": () => import("../../../examples/templates/table-inbox/page.tsx"),
   "page:table-page": () => import("../../../examples/templates/table-page/page.tsx"),
+  "page:table-tree": () => import("../../../examples/templates/table-tree/page.tsx"),
   "page:theme-showcase": () => import("../../../examples/templates/theme-showcase/page.tsx"),
   "page:work-item-detail": () => import("../../../examples/templates/work-item-detail/page.tsx"),
 } as const;

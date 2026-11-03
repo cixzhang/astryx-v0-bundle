@@ -49,7 +49,10 @@ export function FileTreeCard() {
                   id: 'components/home',
                   label: 'home',
                   startContent: folder,
-                  children: [fileItem('components/home/chat-card.tsx'), fileItem('components/home/plan-card.tsx')],
+                  children: [
+                    fileItem('components/home/chat-card.tsx'),
+                    fileItem('components/home/plan-card.tsx'),
+                  ],
                 },
                 fileItem('components/floating-toolbar.tsx'),
               ],

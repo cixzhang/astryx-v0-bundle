@@ -4,10 +4,10 @@
 
 - Bundle version: `0.1.0`
 - v0 schema: `1`
-- Astryx packages: `0.6.3`
-- Astryx source ref: `v0.6.3`
-- Astryx source commit: `8492ddeee2aab94cfc715384beb305d70bf9e5a6`
-- pnpm: `11.10.0`
+- Astryx packages: `0.7.0`
+- Astryx source ref: `v0.7.0`
+- Astryx source commit: `5c4c56b16e0566df7360c2acf5bf2a1c3d953e30`
+- pnpm: `12.3.4`
 
 The Git tag in `v0.json`, the package versions, the catalog provenance, and generated examples must move together. A mutable `main` reference is not used for a released bundle.
 
@@ -26,7 +26,7 @@ pnpm theme:check
 pnpm validate
 ```
 
-The validation pipeline checks the documented v0 schema, all 700 generated entries, exact package alignment, lint, formatting, type safety, unit tests, production builds, public-reference hygiene, and deterministic generated files.
+The validation pipeline checks the documented v0 schema, all 718 generated entries, exact package alignment, lint, formatting, type safety, unit tests, production builds, public-reference hygiene, and deterministic generated files.
 
 Chromium verification is separate:
 

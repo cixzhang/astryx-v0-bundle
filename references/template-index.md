@@ -1,8 +1,8 @@
 # Generated template index
 
-Source: Astryx 0.6.3 at `8492ddeee2aab94cfc715384beb305d70bf9e5a6`. Regenerate with `pnpm generate`; do not edit by hand.
+Source: Astryx 0.7.0 at `5c4c56b16e0566df7360c2acf5bf2a1c3d953e30`. Regenerate with `pnpm generate`; do not edit by hand.
 
-## Page templates (54)
+## Page templates (57)
 
 | Slug | Name | Status | Source in this bundle |
 |---|---|---|---|
@@ -54,14 +54,17 @@ Source: Astryx 0.6.3 at `8492ddeee2aab94cfc715384beb305d70bf9e5a6`. Regenerate w
 | `shell-top-nav` | Top Nav | ready | `examples/templates/shell-top-nav/page.tsx` |
 | `side-gallery` | Side Gallery | ready | `examples/templates/side-gallery/page.tsx` |
 | `table` | Simple Table | wip | `examples/templates/table/page.tsx` |
+| `table-collapsible` | Collapsible Table | ready | `examples/templates/table-collapsible/page.tsx` |
+| `table-comparison` | Comparison Table | ready | `examples/templates/table-comparison/page.tsx` |
 | `table-filter` | Filterable Table | ready | `examples/templates/table-filter/page.tsx` |
 | `table-grouped` | Grouped Table | ready | `examples/templates/table-grouped/page.tsx` |
 | `table-inbox` | Inbox Table | ready | `examples/templates/table-inbox/page.tsx` |
 | `table-page` | Searchable Table | ready | `examples/templates/table-page/page.tsx` |
+| `table-tree` | Tree Table | ready | `examples/templates/table-tree/page.tsx` |
 | `theme-showcase` | Theme Showcase | ready | `examples/templates/theme-showcase/page.tsx` |
 | `work-item-detail` | Work Item Detail | ready | `examples/templates/work-item-detail/page.tsx` |
 
-## Block templates (646)
+## Block templates (661)
 
 | Component or group | Count |
 |---|---:|
@@ -125,6 +128,7 @@ Source: Astryx 0.6.3 at `8492ddeee2aab94cfc715384beb305d70bf9e5a6`. Regenerate w
 | `DialogHeader` | 2 |
 | `Divider` | 4 |
 | `DropdownMenu` | 7 |
+| `DropdownMenuGroup` | 2 |
 | `DropdownMenuItem` | 2 |
 | `EmptyState` | 4 |
 | `Field` | 4 |
@@ -142,7 +146,7 @@ Source: Astryx 0.6.3 at `8492ddeee2aab94cfc715384beb305d70bf9e5a6`. Regenerate w
 | `IconButton` | 5 |
 | `InputGroup` | 2 |
 | `InternationalizationProvider` | 3 |
-| `Item` | 4 |
+| `Item` | 5 |
 | `Kbd` | 4 |
 | `Layer` | 1 |
 | `Layout` | 7 |
@@ -176,6 +180,7 @@ Source: Astryx 0.6.3 at `8492ddeee2aab94cfc715384beb305d70bf9e5a6`. Regenerate w
 | `RadioList` | 5 |
 | `RadioListItem` | 2 |
 | `Resizable` | 2 |
+| `ScrollableArea` | 6 |
 | `Section` | 3 |
 | `SegmentedControl` | 5 |
 | `SegmentedControlItem` | 2 |
@@ -197,7 +202,7 @@ Source: Astryx 0.6.3 at `8492ddeee2aab94cfc715384beb305d70bf9e5a6`. Regenerate w
 | `Switch` | 5 |
 | `SyntaxTheme` | 3 |
 | `Tab` | 2 |
-| `Table` | 19 |
+| `Table` | 21 |
 | `TabList` | 7 |
 | `TabMenu` | 2 |
 | `Text` | 9 |
@@ -206,6 +211,7 @@ Source: Astryx 0.6.3 at `8492ddeee2aab94cfc715384beb305d70bf9e5a6`. Regenerate w
 | `Theme` | 5 |
 | `Thumbnail` | 5 |
 | `TimeInput` | 5 |
+| `Timer` | 4 |
 | `Timestamp` | 7 |
 | `Toast` | 6 |
 | `ToggleButton` | 6 |
@@ -227,4 +233,4 @@ Source: Astryx 0.6.3 at `8492ddeee2aab94cfc715384beb305d70bf9e5a6`. Regenerate w
 | `VisuallyHidden` | 4 |
 | `VStack` | 2 |
 
-For exact block names, requirements, paths, dependencies, and component usage, read `examples/manifest.json` or `catalog/astryx-0.6.3.json`.
+For exact block names, requirements, paths, dependencies, and component usage, read `examples/manifest.json` or `catalog/astryx-0.7.0.json`.

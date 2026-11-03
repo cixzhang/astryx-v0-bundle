@@ -3,21 +3,21 @@
   "bundleVersion": "0.1.0",
   "v0SchemaVersion": 1,
   "astryx": {
-    "version": "0.6.3",
-    "ref": "v0.6.3",
-    "commit": "8492ddeee2aab94cfc715384beb305d70bf9e5a6"
+    "version": "0.7.0",
+    "ref": "v0.7.0",
+    "commit": "5c4c56b16e0566df7360c2acf5bf2a1c3d953e30"
   },
   "counts": {
-    "pageTemplates": 54,
-    "blockTemplates": 646,
+    "pageTemplates": 57,
+    "blockTemplates": 661,
     "presetThemes": 7,
     "themeCapabilities": 8,
     "componentExamples": 8
   },
   "contractHashes": {
-    "v0Json": "e0b59d8a45862318c84dac770c89e94248779ffc7a84bde97a38576238d04cc2",
-    "skill": "a8fdbb95f49c2714b90214547b2295d64146be05e0c8989515ac0a93fe6d47bd",
-    "catalog": "f2a496d398d3b8fb40131c3ea7caace4d57d4702235c337d7803acf263d5f83c"
+    "v0Json": "96a5dd55231847d355c80dd9f051f5d5a8aa48773d3f5ca62446e4d14584e1f3",
+    "skill": "7aecb86f1e6b780f598d984ab97d64c7f856f3e5f8d43c14b979056fa7517456",
+    "catalog": "556614ff888afdcc198b8d8c4e7a76965343eee092ce235eab597130ad295039"
   },
   "entries": [
     {
@@ -258,17 +258,17 @@
     {
       "id": "block:BottomSheetHeights",
       "path": "examples/blocks/components/BottomSheet/BottomSheetHeights.tsx",
-      "sha256": "e6c6c19b6e046b4401842bb5e8d7781877be74acf692f6c62540deea32c22f67"
+      "sha256": "75bc2615d9beacf5c7d7de45ede8ca27457b5e8e0b3e026ef7d28784b9332264"
     },
     {
       "id": "block:BottomSheetMobileKeyboard",
       "path": "examples/blocks/components/BottomSheet/BottomSheetMobileKeyboard.tsx",
-      "sha256": "196341bb8a11f19fca1d8ed68534b0d315bf68692b3a77ae138480f3492c268d"
+      "sha256": "6ea10f743c6e9f9a8575c8a9ce0e009162776a98c4a31a195e0d376a8b0b9be7"
     },
     {
       "id": "block:BottomSheetNoScrim",
       "path": "examples/blocks/components/BottomSheet/BottomSheetNoScrim.tsx",
-      "sha256": "e4794b91228d302fb10ae100191a018a711b636e914278194fa96055036d3a03"
+      "sha256": "b79e0124bb44c2978eea28d3200819db717642ff7bac5524e388d083e3b7e81c"
     },
     {
       "id": "block:BottomSheetShowcase",
@@ -278,7 +278,7 @@
     {
       "id": "block:BottomSheetSnapPoints",
       "path": "examples/blocks/components/BottomSheet/BottomSheetSnapPoints.tsx",
-      "sha256": "9b51b85ec772b8bde091ba1ad340620130fb2355a4ad50a0b45d018ce09845f4"
+      "sha256": "6fc45f180db29cc992c01abcd37ea4d1cfbc297c4b44816c6a322acd301c3a4e"
     },
     {
       "id": "block:BottomSheetSwitcherReviewFlow",
@@ -813,7 +813,7 @@
     {
       "id": "block:CheckboxListSelectAllPattern",
       "path": "examples/blocks/components/CheckboxList/CheckboxListSelectAllPattern.tsx",
-      "sha256": "b6f7bff9d6fb03e3517e3c9eca956c28bb6703789b15086d66d686664e37134a"
+      "sha256": "c16108da4ae05df7f416408fc1670f352f0ab61879fd570ac4dfe31d1d6f1929"
     },
     {
       "id": "block:CheckboxListShowcase",
@@ -1038,17 +1038,17 @@
     {
       "id": "block:ComplexSelectorDeadlinePicker",
       "path": "examples/blocks/components/ComplexSelector/ComplexSelectorDeadlinePicker.tsx",
-      "sha256": "d849530cc568f4b796586ad341f39e621d26100954269fc1ed81fd27c46e0f97"
+      "sha256": "b45f8054ecf5544644c267c7166e43a00964ce05fda02bc5ef59e6842ce6a835"
     },
     {
       "id": "block:ComplexSelectorShowcase",
       "path": "examples/blocks/components/ComplexSelector/ComplexSelectorShowcase.tsx",
-      "sha256": "75eafbcc75b519dce0093faf506cd69e47c4d4e67205bc7b85426a7994b0ff0a"
+      "sha256": "268c5d7c244b4345aae96af34acb9c0e9050a65fa8d77f5c033f197a97b63201"
     },
     {
       "id": "block:ComplexSelectorTreeSearch",
       "path": "examples/blocks/components/ComplexSelector/ComplexSelectorTreeSearch.tsx",
-      "sha256": "97ec69c88d0ace5031f4225a48d47d4083b1a55a2bdd1a45cb91106eb97f6c0a"
+      "sha256": "96d6b899609fcc85437b8414935a84805171887313ae00ffdcfd173a254ec877"
     },
     {
       "id": "block:ContextMenuBasic",
@@ -1083,7 +1083,7 @@
     {
       "id": "block:DateInputDateRange",
       "path": "examples/blocks/components/DateInput/DateInputDateRange.tsx",
-      "sha256": "7faffe877f65916f95928bd7333b85574e66aed309e7cac64a9b1d22abd511a2"
+      "sha256": "db0d7618e4ec2f7f0110d03dd386b6658c0970dfa2f25a1ab35d017a772b7288"
     },
     {
       "id": "block:DateInputFormats",
@@ -1133,7 +1133,7 @@
     {
       "id": "block:DialogAdaptivePresentation",
       "path": "examples/blocks/components/Dialog/DialogAdaptivePresentation.tsx",
-      "sha256": "b4eb4f4a4f4685e413dd69939b24085b89b6756cce19c407212bb479d3663b50"
+      "sha256": "2280084e0d708587a46503623f2064ff99b4bf925c6418b036d61de73ebeb961"
     },
     {
       "id": "block:DialogConfirmationDialog",
@@ -1229,6 +1229,16 @@
       "id": "block:DropdownMenuWithSubmenu",
       "path": "examples/blocks/components/DropdownMenu/DropdownMenuWithSubmenu.tsx",
       "sha256": "9121e0188ee9fdf2d92283f9b27039e72ef8323973f54b8f07c2e1764bfac844"
+    },
+    {
+      "id": "block:DropdownMenuGroupShowcase",
+      "path": "examples/blocks/components/DropdownMenuGroup/DropdownMenuGroupShowcase.tsx",
+      "sha256": "d36dda5ded7ae0f25bae74137f3522d9be16b13638bd4237fa5b73ac6c11ca32"
+    },
+    {
+      "id": "block:DropdownMenuGroupWithSelectable",
+      "path": "examples/blocks/components/DropdownMenuGroup/DropdownMenuGroupWithSelectable.tsx",
+      "sha256": "c011c84e87d2141afa2edb9de10ced57d25304660554ff12ce22bad72b64d665"
     },
     {
       "id": "block:DropdownMenuItemBasic",
@@ -1503,12 +1513,12 @@
     {
       "id": "block:InternationalizationProvider01ShippedLocale",
       "path": "examples/blocks/components/InternationalizationProvider/InternationalizationProvider01ShippedLocale.tsx",
-      "sha256": "82932fe41426e28493fe481653e32dc3b3137e7d75079f8ac2dd962b7376d1f0"
+      "sha256": "19ca1e6fd244362650b24721937de7eb3ad3cf2859bafcf086d9f8ef5b7741e4"
     },
     {
       "id": "block:InternationalizationProvider02Overrides",
       "path": "examples/blocks/components/InternationalizationProvider/InternationalizationProvider02Overrides.tsx",
-      "sha256": "97a216e7dd690c194ad781958bbc711e7d032c9b38e24d5835989c174ea76143"
+      "sha256": "479b60449eedc4870b13eb8c29225930bd177534f6517836b9349c39c7c9813f"
     },
     {
       "id": "block:InternationalizationProvider03RtlDirection",
@@ -1519,6 +1529,11 @@
       "id": "block:ItemBasicItem",
       "path": "examples/blocks/components/Item/ItemBasicItem.tsx",
       "sha256": "d6f28a1d8fd0196bf08fef03a047228ff752b1ebf9e53dc154b2b4b92908350e"
+    },
+    {
+      "id": "block:ItemDocumentTabs",
+      "path": "examples/blocks/components/Item/ItemDocumentTabs.tsx",
+      "sha256": "ead30e6ca4d2f356cf3438d9f47f7519e815ad9354e630991ae493bb477ec1e2"
     },
     {
       "id": "block:ItemShowcase",
@@ -2146,6 +2161,36 @@
       "sha256": "949c9f134471fd539264ebc81a79046de157a48e17c78dd72272ba04df14e867"
     },
     {
+      "id": "block:ScrollableAreaInlineRail",
+      "path": "examples/blocks/components/ScrollableArea/ScrollableAreaInlineRail.tsx",
+      "sha256": "ceb2a658653bc3f90ed11fc98e2fe20b835641f60f6f932b188eb697275dd534"
+    },
+    {
+      "id": "block:ScrollableAreaOverscrollChaining",
+      "path": "examples/blocks/components/ScrollableArea/ScrollableAreaOverscrollChaining.tsx",
+      "sha256": "6666895c8eedc9396baffc142ed3a2290053bd5812ef932a99cd3de02a3138f6"
+    },
+    {
+      "id": "block:ScrollableAreaShowcase",
+      "path": "examples/blocks/components/ScrollableArea/ScrollableAreaShowcase.tsx",
+      "sha256": "1ab942ae94926d07261718a85bd304a5d502d8eea2685f97cd31bbf2cb620ecd"
+    },
+    {
+      "id": "block:ScrollableAreaStickyGroupHeaders",
+      "path": "examples/blocks/components/ScrollableArea/ScrollableAreaStickyGroupHeaders.tsx",
+      "sha256": "1aeef3d463d551f86bcd7578b279f7984f84bb70bdea44512aac360d4db188f7"
+    },
+    {
+      "id": "block:ScrollableAreaStickyPassthrough",
+      "path": "examples/blocks/components/ScrollableArea/ScrollableAreaStickyPassthrough.tsx",
+      "sha256": "c7e9e6dab9d6567e2c212acf415fb82c80f12c59be9a4d64a6804642a4d16514"
+    },
+    {
+      "id": "block:ScrollableAreaTwoAxisBoard",
+      "path": "examples/blocks/components/ScrollableArea/ScrollableAreaTwoAxisBoard.tsx",
+      "sha256": "0bbfd4d7e1768cc94fe26e7c5ea88b1100666a46b29c8f48fbdc4768bd44d171"
+    },
+    {
       "id": "block:SectionVariants",
       "path": "examples/blocks/components/Section/SectionVariants.tsx",
       "sha256": "de563b12867e75f654548e4dc88753406723ff4e56bbab3cde31ea193c865f84"
@@ -2203,7 +2248,7 @@
     {
       "id": "block:SelectorClearable",
       "path": "examples/blocks/components/Selector/SelectorClearable.tsx",
-      "sha256": "bd3d03a7d6b2075929a834f20133b04601c225a9a8843a74d7223aeb65398773"
+      "sha256": "ce0975c77c5bc364800d704795d3865a9fca2c854e8f20699200f54f1f4cbe15"
     },
     {
       "id": "block:SelectorGhostToolbar",
@@ -2213,17 +2258,17 @@
     {
       "id": "block:SelectorOptionDescriptions",
       "path": "examples/blocks/components/Selector/SelectorOptionDescriptions.tsx",
-      "sha256": "70f88983f14717d84f5a21be58fc72f33f3a50f1fe9826f5b14155a6b279035b"
+      "sha256": "3ca59d251a4f5177b4f10cfaf533c0ca2d750fcbc8a6b1178b0d612599b876de"
     },
     {
       "id": "block:SelectorShowcase",
       "path": "examples/blocks/components/Selector/SelectorShowcase.tsx",
-      "sha256": "aae5fb0b09012d7b8978d139dc3c5a4ed7c25f65ab1f474d8a1cee492f28d1bb"
+      "sha256": "263ef81d0081e2ed54a92e0639f0ddec2e937eaa6ebaa4ecd422e8ff94f4b1e7"
     },
     {
       "id": "block:SelectorWithSections",
       "path": "examples/blocks/components/Selector/SelectorWithSections.tsx",
-      "sha256": "4e4d0c6223ee5d3d5dfff2ce1584f58e953b4c3e2035cd2fb702d614043d81b8"
+      "sha256": "d01a34b7453bb917941762283a682bd2ab2ccb1a52cec76048bbcc1cb9a65e28"
     },
     {
       "id": "block:SelectorWithStatus",
@@ -2233,12 +2278,12 @@
     {
       "id": "block:SelectorOptionBasic",
       "path": "examples/blocks/components/SelectorOption/SelectorOptionBasic.tsx",
-      "sha256": "14b432b400ce0fa9a8fb569732706e3d06cc4cada3414a1d727df1eaa4cd416d"
+      "sha256": "6686d989af4b98273baec182b2da4dafddd5848d81785db16ffd161cfc880f05"
     },
     {
       "id": "block:SelectorOptionShowcase",
       "path": "examples/blocks/components/SelectorOption/SelectorOptionShowcase.tsx",
-      "sha256": "23f851fa0a5f30e8030ae4210890c43eec9ffbd38c359f7787b1833316b2f096"
+      "sha256": "2c7a874fa2e9c0e138c6564e958c47d0773cfd5dec78f4d801e09b92ab2b5880"
     },
     {
       "id": "block:SideNavEndContent",
@@ -2323,22 +2368,22 @@
     {
       "id": "block:SliderFormattedValue",
       "path": "examples/blocks/components/Slider/SliderFormattedValue.tsx",
-      "sha256": "a1343c3811131fd6576d4f8a5375c2f363e913b818bf41249151e1b06ae7de92"
+      "sha256": "0f67e5e3c1643ac973c26033908260bfa5e665c56e5b56b73a4aa871a8c06c22"
     },
     {
       "id": "block:SliderRangeSlider",
       "path": "examples/blocks/components/Slider/SliderRangeSlider.tsx",
-      "sha256": "045edcf6db4eaf930fbb6ced4dd32492d0c06824ad07ad675525eece00d3997a"
+      "sha256": "0669307a8cea9b9347398358bd13609a81b2f9434593141f9e63ed7c114c2135"
     },
     {
       "id": "block:SliderShowcase",
       "path": "examples/blocks/components/Slider/SliderShowcase.tsx",
-      "sha256": "b3cf4261e06fa1f7c5d56e891b94d6f84ca4a9aed96185d366bd55db98c29cd9"
+      "sha256": "b4a64a1775fa16b3630febd7bb51a305f53bd08551a60d2dd50905beba46b69b"
     },
     {
       "id": "block:SliderWithMarks",
       "path": "examples/blocks/components/Slider/SliderWithMarks.tsx",
-      "sha256": "3d4d3813033975274d33efc9c2878bd4f591089de6afc712b1b187638f75412d"
+      "sha256": "93a33ecb4fd255129521988dc10d322aa4d482a23ccf86e1790ad030aec1768f"
     },
     {
       "id": "block:SliderWithStatus",
@@ -2526,6 +2571,11 @@
       "sha256": "71333bae949d371b7e11e177c1fbcbebd228126bc70f85441473ec89fa9f384d"
     },
     {
+      "id": "block:TableBulkActionsTable",
+      "path": "examples/blocks/components/Table/TableBulkActionsTable.tsx",
+      "sha256": "51e2f638f67df60e5c9d63dea520e6b248c5ffe6cf82bb9fa2d1a4b201a91d33"
+    },
+    {
       "id": "block:TableColumnSettingsTable",
       "path": "examples/blocks/components/Table/TableColumnSettingsTable.tsx",
       "sha256": "6abdda624b6c8f0286944424ce486d98c5751fd141d57bcac1e138f19553064a"
@@ -2534,6 +2584,11 @@
       "id": "block:TableFilterableTable",
       "path": "examples/blocks/components/Table/TableFilterableTable.tsx",
       "sha256": "16743aa58b55abbf74b8b00fedc40b8d3c0bdade9136da3256a1ca8c35e88dad"
+    },
+    {
+      "id": "block:TableFloatingBulkActionsTable",
+      "path": "examples/blocks/components/Table/TableFloatingBulkActionsTable.tsx",
+      "sha256": "95344356d567fcc7b6618b0be77337730a60db059cde3bc56ef2d7f18d0a4d44"
     },
     {
       "id": "block:TableGridDividersTable",
@@ -2813,7 +2868,7 @@
     {
       "id": "block:TimeInputConstrained",
       "path": "examples/blocks/components/TimeInput/TimeInputConstrained.tsx",
-      "sha256": "874f9b723077e3cf7fe53548a80f4f11c7a344be6ce73b2267029b9e319c5f0d"
+      "sha256": "0c5dd15d1287aa20bdbdf270f19129ff90a25bcb3664e577c531b91e8219816a"
     },
     {
       "id": "block:TimeInputFormats",
@@ -2834,6 +2889,26 @@
       "id": "block:TimeInputStates",
       "path": "examples/blocks/components/TimeInput/TimeInputStates.tsx",
       "sha256": "3903dfc74ef827740ce2778faea0ae3d687d20bf2006715d2bdfc089c1facb85"
+    },
+    {
+      "id": "block:TimerFormats",
+      "path": "examples/blocks/components/Timer/TimerFormats.tsx",
+      "sha256": "f0c1a62b444c069530f2b4770af368afd7c7dbbf7c9b50d514f502023f58460f"
+    },
+    {
+      "id": "block:TimerInline",
+      "path": "examples/blocks/components/Timer/TimerInline.tsx",
+      "sha256": "dbf96c3267f58cbc06c3f3c70fb431a3f756fc10a3d6424a907438ab7745c578"
+    },
+    {
+      "id": "block:TimerShowcase",
+      "path": "examples/blocks/components/Timer/TimerShowcase.tsx",
+      "sha256": "1b6b8e0f481610570b051f099eb611889b718accdbac007652c11ce311e4dc45"
+    },
+    {
+      "id": "block:TimerTypography",
+      "path": "examples/blocks/components/Timer/TimerTypography.tsx",
+      "sha256": "9c5c041e187f6c662ab4e9115c1f42eff0ebed636941a649f221d41541e7b6fc"
     },
     {
       "id": "block:TimestampAutoFormat",
@@ -2973,42 +3048,42 @@
     {
       "id": "block:TokenizerClear",
       "path": "examples/blocks/components/Tokenizer/TokenizerClear.tsx",
-      "sha256": "0bee78df7a52eb57fca2f23619ca34d460c5b264d6ae42678dadaa35a69f8b45"
+      "sha256": "edec33e81ca4d5d21eebc542722a97559725d3cd34a99a4d59d7bcf41988ed1f"
     },
     {
       "id": "block:TokenizerCreatable",
       "path": "examples/blocks/components/Tokenizer/TokenizerCreatable.tsx",
-      "sha256": "63cefbd47b39b5b928209e17bb5545306d55494cddf0fddcdb1de98460ec1c77"
+      "sha256": "27dd1515d7e98aae69771f0575a4b9916acf3c9a15af6d09985172534833652f"
     },
     {
       "id": "block:TokenizerEndContent",
       "path": "examples/blocks/components/Tokenizer/TokenizerEndContent.tsx",
-      "sha256": "cc04742d729353a6f068e58fc21bb469b98111d4a20dacb39203e18d2429b91b"
+      "sha256": "5ea5751247531f5707b55d9ea663121a98183e274b93a08559f788bd2eacd70c"
     },
     {
       "id": "block:TokenizerIcon",
       "path": "examples/blocks/components/Tokenizer/TokenizerIcon.tsx",
-      "sha256": "bf172988459e477d2a583552e575ab29a0f1f64c0e748d09d5cb04cfa756dfa2"
+      "sha256": "b34180c6127da7a7f9c635776438104afd6c3f83892e0705cdc983241b18a951"
     },
     {
       "id": "block:TokenizerMaxEntries",
       "path": "examples/blocks/components/Tokenizer/TokenizerMaxEntries.tsx",
-      "sha256": "d85c04729051d3b2bfee173b4df8dac39a43477aacdc19bc9e98a3e6542316cb"
+      "sha256": "d26ddaf59c49b1db834a5054ce5841df35707b32e6ae71a0cb299b803b327d28"
     },
     {
       "id": "block:TokenizerOverflow",
       "path": "examples/blocks/components/Tokenizer/TokenizerOverflow.tsx",
-      "sha256": "32277da99c9d851da580e5c7f0eda642aac9d58e751261cb33a77bb92139defe"
+      "sha256": "131103e72c0a7732c90eed8c067e9bbd8637603898a2189bc20c9c8db1304897"
     },
     {
       "id": "block:TokenizerShowcase",
       "path": "examples/blocks/components/Tokenizer/TokenizerShowcase.tsx",
-      "sha256": "7fe81b2866356957188b2c574d94ab52b24c028f169735e54a3f4f71b646be5d"
+      "sha256": "18bbe0356215be253d14a32d1b4c2cc99b933327891ae1cbca8ba9490168062d"
     },
     {
       "id": "block:TokenizerStates",
       "path": "examples/blocks/components/Tokenizer/TokenizerStates.tsx",
-      "sha256": "5f4d0b73b21f051d4eef6493e152953050cfddc9a2a8ad9a17160f78c40eb3b7"
+      "sha256": "5b3cd6b566df2b3246390087bee46888a43bd8fd41ba4a2129274ab5da785e50"
     },
     {
       "id": "block:ToolbarBulkActions",
@@ -3028,7 +3103,7 @@
     {
       "id": "block:ToolbarTableFilter",
       "path": "examples/blocks/components/Toolbar/ToolbarTableFilter.tsx",
-      "sha256": "a451bad07b13f1d43ad8044d5e98fe4bea0655b2e02f51200ecc2db5e9dfdc76"
+      "sha256": "adff4689214d1f6ef49595571fe57c918e0672a737431b41dc05e7e9a1e2b4c0"
     },
     {
       "id": "block:ToolbarThreeSlot",
@@ -3268,7 +3343,7 @@
     {
       "id": "page:canvas-editor",
       "path": "examples/templates/canvas-editor/page.tsx",
-      "sha256": "2003980dc0509d28a68dabf17fa6008e612bd32b426944b542ad3f8959b8aa1a"
+      "sha256": "596f9f4e172aa53e963a20563bb37d8998c58e699cf1c3403d06b7121b087e20"
     },
     {
       "id": "page:centered-hero",
@@ -3373,7 +3448,7 @@
     {
       "id": "page:form-wizard-vertical",
       "path": "examples/templates/form-wizard-vertical/page.tsx",
-      "sha256": "1cb01a3f519681ebf6d91209ee2c71e950532374e9da9705c2c9a368c214c30f"
+      "sha256": "220e635570401eafd62b931b434f6dbe1df8466ac926774436d38a5fa5e427bd"
     },
     {
       "id": "page:form-wizard",
@@ -3393,7 +3468,7 @@
     {
       "id": "page:incident-console",
       "path": "examples/templates/incident-console/page.tsx",
-      "sha256": "b749d7d1a26f456932a818adffc21d5580e1c2761371d944dc2c95c8fbfccdc0"
+      "sha256": "f48df30f6a582d32861530e3f732ebd401042d1deb057e1fa8669dab2323d31d"
     },
     {
       "id": "page:kanban-board",
@@ -3438,7 +3513,7 @@
     {
       "id": "page:payment-form",
       "path": "examples/templates/payment-form/page.tsx",
-      "sha256": "b08d57ec82d55a9831169d0634d3642a3b3af1fd04e18cdea4e79fd6892a12a1"
+      "sha256": "9e02cab4ff6410a09eb4c6a14a5c9b8be4e6f542754c71fa9d3ab7d5c5a53d6c"
     },
     {
       "id": "page:product-detail",
@@ -3486,9 +3561,19 @@
       "sha256": "a0ea62e5a1a9e9eea7d07447bf0a705be561c2fcd911a8d4694ef1a81f286213"
     },
     {
+      "id": "page:table-collapsible",
+      "path": "examples/templates/table-collapsible/page.tsx",
+      "sha256": "cc1b180e2c81c87aee5d575b420b153839ca5fcea448af5233caa4e9309abef1"
+    },
+    {
+      "id": "page:table-comparison",
+      "path": "examples/templates/table-comparison/page.tsx",
+      "sha256": "118d0a92075a3d2225398586c4db22f5ed8da1ba20d782d43bc33d3fdfd87b1a"
+    },
+    {
       "id": "page:table-filter",
       "path": "examples/templates/table-filter/page.tsx",
-      "sha256": "b2e3dab0581a8bb43596fc6c3163cbfbccb9220112ae5941b3050c63a5d2bba0"
+      "sha256": "6d269f6a92a89d7f2adce70a1a31c3191d741492af4fe0d5ac7c0469337ed62a"
     },
     {
       "id": "page:table-grouped",
@@ -3498,12 +3583,17 @@
     {
       "id": "page:table-inbox",
       "path": "examples/templates/table-inbox/page.tsx",
-      "sha256": "98338da9625c6d5e9270b4604e8ec8f261871b447cbaae1f8e99068323977dfa"
+      "sha256": "a4de5c81e6839bfe276fd586aa182fdcfb9b8905e4bb243dc2bdf7b1030e58c6"
     },
     {
       "id": "page:table-page",
       "path": "examples/templates/table-page/page.tsx",
       "sha256": "4dcfea3425e172dee2f3d0c3e5e1d772c025070cbde5fb75c8badcd34150c2de"
+    },
+    {
+      "id": "page:table-tree",
+      "path": "examples/templates/table-tree/page.tsx",
+      "sha256": "dcba081f12ebfec5008ac87434149f1fc76bbce6a2dd157e1e79e341435c0afc"
     },
     {
       "id": "page:table",
@@ -3513,7 +3603,7 @@
     {
       "id": "page:theme-showcase",
       "path": "examples/templates/theme-showcase/page.tsx",
-      "sha256": "3158fe6aab1f09e399a1f1a3a9469a3952f36fed2791007e0af86739c9739474"
+      "sha256": "c756a13b01de40198695e979894a0a92b421d4596857fe757ca562ffacf0db9d"
     },
     {
       "id": "page:work-item-detail",

@@ -4,7 +4,7 @@ Astryx themes are typed values created by `defineTheme` and applied by `Theme`. 
 
 ## Public presets
 
-All public presets are pinned to 0.6.3:
+All public presets are pinned to 0.7.0:
 
 - `@astryxdesign/theme-neutral`
 - `@astryxdesign/theme-butter`

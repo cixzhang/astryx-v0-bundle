@@ -6,7 +6,7 @@ import {fileURLToPath, pathToFileURL} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
-const catalogPath = path.join(root, 'catalog/astryx-0.6.3.json');
+const catalogPath = path.join(root, 'catalog/astryx-0.7.0.json');
 const catalog = JSON.parse(await readFile(catalogPath, 'utf8'));
 
 const cliEntry = fileURLToPath(import.meta.resolve('@astryxdesign/cli'));
@@ -151,7 +151,7 @@ const blockRows = [...blockGroups.entries()]
   .join('\n');
 outputs.set(
   'references/template-index.md',
-  `# Generated template index\n\nSource: Astryx ${catalog.source.packageVersion} at \`${catalog.source.gitCommit}\`. Regenerate with \`pnpm generate\`; do not edit by hand.\n\n## Page templates (${pages.length})\n\n| Slug | Name | Status | Source in this bundle |\n|---|---|---|---|\n${pageRows}\n\n## Block templates (${blocks.length})\n\n| Component or group | Count |\n|---|---:|\n${blockRows}\n\nFor exact block names, requirements, paths, dependencies, and component usage, read \`examples/manifest.json\` or \`catalog/astryx-0.6.3.json\`.\n`,
+  `# Generated template index\n\nSource: Astryx ${catalog.source.packageVersion} at \`${catalog.source.gitCommit}\`. Regenerate with \`pnpm generate\`; do not edit by hand.\n\n## Page templates (${pages.length})\n\n| Slug | Name | Status | Source in this bundle |\n|---|---|---|---|\n${pageRows}\n\n## Block templates (${blocks.length})\n\n| Component or group | Count |\n|---|---:|\n${blockRows}\n\nFor exact block names, requirements, paths, dependencies, and component usage, read \`examples/manifest.json\` or \`catalog/astryx-0.7.0.json\`.\n`,
 );
 
 const hashes = [...outputs.entries()]

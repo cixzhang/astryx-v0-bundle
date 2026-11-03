@@ -1,6 +1,6 @@
 ---
 name: astryx
-description: Build React 19 and Next.js interfaces with Astryx 0.6.3 components, public themes, tokens, and official templates. Use when a user requests Astryx, wants a non-shadcn design-system starter, needs an official Astryx page or block template, or asks for Astryx custom theming.
+description: Build React 19 and Next.js interfaces with Astryx 0.7.0 components, public themes, tokens, and official templates. Use when a user requests Astryx, wants a non-shadcn design-system starter, needs an official Astryx page or block template, or asks for Astryx custom theming.
 license: MIT
 metadata:
   v0.kind: design-system
@@ -20,8 +20,8 @@ Build on the verified app in `assets/starter`. It already has React 19, the Astr
 
 ## Source and version
 
-- Use only public `@astryxdesign/*` packages pinned to `0.6.3`.
-- Public component source and exact APIs live in the read-only Astryx reference at `/vercel/share/v0-reference-workspace-sources/facebook/astryx/v0.6.3`.
+- Use only public `@astryxdesign/*` packages pinned to `0.7.0`.
+- Public component source and exact APIs live in the read-only Astryx reference at `/vercel/share/v0-reference-workspace-sources/facebook/astryx/v0.7.0`.
 - The installed package declarations are the final authority for props and exports. Never invent a prop, token, target, or variant.
 - Import components from public subpaths such as `@astryxdesign/core/Button`.
 
@@ -33,7 +33,7 @@ Build on the verified app in `assets/starter`. It already has React 19, the Astr
 - Component selection, API rules, and accessibility: `references/components.md`
 - Bundle versions, validation, and updates: `references/maintenance.md`
 
-Load only the reference needed for the task. The full versioned catalog is `catalog/astryx-0.6.3.json`.
+Load only the reference needed for the task. The full versioned catalog is `catalog/astryx-0.7.0.json`.
 
 ## Hard rules
 

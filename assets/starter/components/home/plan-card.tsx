@@ -6,7 +6,10 @@ import {Button} from '@astryxdesign/core/Button';
 import {Card} from '@astryxdesign/core/Card';
 import {VStack} from '@astryxdesign/core/Layout';
 import {RadioList, RadioListItem} from '@astryxdesign/core/RadioList';
-import {SegmentedControl, SegmentedControlItem} from '@astryxdesign/core/SegmentedControl';
+import {
+  SegmentedControl,
+  SegmentedControlItem,
+} from '@astryxdesign/core/SegmentedControl';
 import {Heading, Text} from '@astryxdesign/core/Text';
 
 type Billing = 'monthly' | 'yearly';
@@ -38,7 +41,8 @@ export function PlanCard() {
             label="Billing period"
             value={billing}
             layout="fill"
-            onChange={(value) => setBilling(value as Billing)}>
+            onChange={(value) => setBilling(value as Billing)}
+          >
             <SegmentedControlItem value="monthly" label="Monthly" />
             <SegmentedControlItem value="yearly" label="Yearly" />
           </SegmentedControl>
@@ -66,7 +70,11 @@ export function PlanCard() {
           ))}
         </RadioList>
         <Button
-          label={selected && selected.monthly > 0 ? `Upgrade to ${selected.label}` : 'Stay on Starter'}
+          label={
+            selected && selected.monthly > 0
+              ? `Upgrade to ${selected.label}`
+              : 'Stay on Starter'
+          }
           variant="primary"
           size="lg"
         />

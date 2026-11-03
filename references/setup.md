@@ -2,13 +2,13 @@
 
 ## Supported stack
 
-The starter uses Node 22+, pnpm 11, React 19, Next.js 15, and Astryx 0.6.3. All public Astryx packages stay on the same version.
+The starter uses Node 22+, pnpm 12, React 19, Next.js 16, and Astryx 0.7.0. All public Astryx packages stay on the same version.
 
 Install the minimum runtime:
 
 ```bash
-pnpm add @astryxdesign/core@0.6.3 \
-  @astryxdesign/theme-neutral@0.6.3 \
+pnpm add @astryxdesign/core@0.7.0 \
+  @astryxdesign/theme-neutral@0.7.0 \
   @stylexjs/stylex@0.19.1 react@19.2.7 react-dom@19.2.7
 ```
 

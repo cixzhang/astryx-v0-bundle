@@ -117,7 +117,13 @@ const communicationAndMedia: CardEntry[] = [
   {file: 'file-tree-card', Component: FileTreeCard},
 ];
 
-function CardColumn({cards, xstyle}: {cards: CardEntry[]; xstyle?: stylex.StyleXStyles}) {
+function CardColumn({
+  cards,
+  xstyle,
+}: {
+  cards: CardEntry[];
+  xstyle?: stylex.StyleXStyles;
+}) {
   return (
     <VStack gap={5} xstyle={xstyle}>
       {cards.map(({file, Component}) => (
