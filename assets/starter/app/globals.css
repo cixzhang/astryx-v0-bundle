@@ -21,7 +21,9 @@ html.theme-transition,
 html.theme-transition *,
 html.theme-transition *::before,
 html.theme-transition *::after {
-  transition-property: background-color, color, border-color, outline-color, fill, stroke, box-shadow, border-radius !important;
+  transition-property:
+    background-color, color, border-color, outline-color, fill, stroke, box-shadow,
+    border-radius !important;
   transition-duration: 400ms !important;
   transition-timing-function: ease !important;
 }

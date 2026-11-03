@@ -2,16 +2,16 @@
   "schemaVersion": 1,
   "source": {
     "repository": "https://github.com/facebook/astryx",
-    "packageVersion": "0.6.3",
-    "gitTag": "v0.6.3",
-    "gitCommit": "8492ddeee2aab94cfc715384beb305d70bf9e5a6",
-    "releaseUrl": "https://github.com/facebook/astryx/releases/tag/v0.6.3",
+    "packageVersion": "0.7.0",
+    "gitTag": "v0.7.0",
+    "gitCommit": "5c4c56b16e0566df7360c2acf5bf2a1c3d953e30",
+    "releaseUrl": "https://github.com/facebook/astryx/releases/tag/v0.7.0",
     "v0Contract": "https://v0.app/docs/design-systems-2",
     "v0SchemaVersion": 1
   },
   "scope": {
-    "pageTemplates": 54,
-    "blockTemplates": 646,
+    "pageTemplates": 57,
+    "blockTemplates": 661,
     "presetThemes": 7,
     "themeCapabilities": 8,
     "componentExamples": 8
@@ -3957,8 +3957,7 @@
         "@astryxdesign/core"
       ],
       "components": [
-        "CheckboxList",
-        "Divider"
+        "CheckboxList"
       ],
       "doneCriteria": [
         "Generated source preserves the public upstream implementation and copyright header.",
@@ -5967,6 +5966,52 @@
       "exclusion": null
     },
     {
+      "id": "block:DropdownMenuGroupShowcase",
+      "kind": "block-template",
+      "name": "Dropdown Menu Group",
+      "description": "A compound-mode menu whose rows are titled in groups. Each DropdownMenuGroup renders a role=\"group\" named by its heading; arrow keys and typeahead skip the heading.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/DropdownMenuGroup/DropdownMenuGroupShowcase.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/DropdownMenuGroup/DropdownMenuGroupShowcase.doc.mjs",
+      "targetPath": "examples/blocks/components/DropdownMenuGroup/DropdownMenuGroupShowcase.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "DropdownMenu"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:DropdownMenuGroupWithSelectable",
+      "kind": "block-template",
+      "name": "DropdownMenuGroup — Selectable rows",
+      "description": "Titled groups around a radio group and checkbox rows — the rows the data API cannot express, which is why the heading lives in compound mode.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/DropdownMenuGroup/DropdownMenuGroupWithSelectable.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/DropdownMenuGroup/DropdownMenuGroupWithSelectable.doc.mjs",
+      "targetPath": "examples/blocks/components/DropdownMenuGroup/DropdownMenuGroupWithSelectable.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "DropdownMenu"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
       "id": "block:DropdownMenuItemBasic",
       "kind": "block-template",
       "name": "DropdownMenuItem — Basic",
@@ -7456,6 +7501,37 @@
         "Item",
         "Layout",
         "Text"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:ItemDocumentTabs",
+      "kind": "block-template",
+      "name": "Item — Document Tabs",
+      "description": "Single-row, horizontally scrollable document switcher with compact selected rows, leading file icons, instant reveal-on-hover close actions with reserved geometry, stable separators, and an add control outside the scroll area. Use for editor tabs, workspace tabs, open documents, files, canvases, or panels.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/Item/ItemDocumentTabs.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/Item/ItemDocumentTabs.doc.mjs",
+      "targetPath": "examples/blocks/components/Item/ItemDocumentTabs.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core",
+        "@heroicons/react",
+        "@stylexjs/stylex"
+      ],
+      "components": [
+        "Divider",
+        "Icon",
+        "IconButton",
+        "Item",
+        "Layout",
+        "hooks",
+        "utils"
       ],
       "doneCriteria": [
         "Generated source preserves the public upstream implementation and copyright header.",
@@ -10565,6 +10641,173 @@
       "exclusion": null
     },
     {
+      "id": "block:ScrollableAreaInlineRail",
+      "kind": "block-template",
+      "name": "Scrollable Area — Inline Rail",
+      "description": "axis=\"inline\" scrolls the same cards sideways; isFullBleed lets the rail run to the panel edges while the content padding keeps the first card aligned with the heading.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaInlineRail.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaInlineRail.doc.mjs",
+      "targetPath": "examples/blocks/components/ScrollableArea/ScrollableAreaInlineRail.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "Card",
+        "Layout",
+        "Link",
+        "ScrollableArea",
+        "Text"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:ScrollableAreaOverscrollChaining",
+      "kind": "block-template",
+      "name": "Scrollable Area — Overscroll",
+      "description": "The same section, two edge policies: the default overscroll=\"allow\" hands a gesture that reaches the end to the panel behind it, while overscroll=\"contain\" stops it at the section edge.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaOverscrollChaining.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaOverscrollChaining.doc.mjs",
+      "targetPath": "examples/blocks/components/ScrollableArea/ScrollableAreaOverscrollChaining.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core",
+        "@stylexjs/stylex"
+      ],
+      "components": [
+        "Card",
+        "Grid",
+        "Layout",
+        "ScrollableArea",
+        "Text",
+        "theme"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:ScrollableAreaShowcase",
+      "kind": "block-template",
+      "name": "Scrollable Area",
+      "description": "A fixed-height file panel that scrolls on the block axis; the heading sits inside the viewport, so it scrolls away with the content.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaShowcase.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaShowcase.doc.mjs",
+      "targetPath": "examples/blocks/components/ScrollableArea/ScrollableAreaShowcase.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "Card",
+        "Grid",
+        "Layout",
+        "ScrollableArea",
+        "Text"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:ScrollableAreaStickyGroupHeaders",
+      "kind": "block-template",
+      "name": "Scrollable Area — Sticky Section Labels",
+      "description": "A scrollable viewport is the containing block for position: sticky, so section labels pin to the top edge of the list instead of the page.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaStickyGroupHeaders.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaStickyGroupHeaders.doc.mjs",
+      "targetPath": "examples/blocks/components/ScrollableArea/ScrollableAreaStickyGroupHeaders.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core",
+        "@stylexjs/stylex"
+      ],
+      "components": [
+        "Card",
+        "Grid",
+        "Layout",
+        "ScrollableArea",
+        "Text",
+        "theme"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:ScrollableAreaStickyPassthrough",
+      "kind": "block-template",
+      "name": "Scrollable Area — Sticky Passthrough",
+      "description": "A section whose content fits clips instead of scrolling, so its sticky label passes outward and pins to the panel edge. The next section sets stickyContainment=\"always\" and keeps its label in its own box.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaStickyPassthrough.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaStickyPassthrough.doc.mjs",
+      "targetPath": "examples/blocks/components/ScrollableArea/ScrollableAreaStickyPassthrough.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core",
+        "@stylexjs/stylex"
+      ],
+      "components": [
+        "Card",
+        "Grid",
+        "Layout",
+        "ScrollableArea",
+        "Text",
+        "theme"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:ScrollableAreaTwoAxisBoard",
+      "kind": "block-template",
+      "name": "Scrollable Area — Two-Axis Board",
+      "description": "axis=\"both\" gives the content box max-content inline sizing, so a board wider and taller than its panel scrolls on both axes from one viewport.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaTwoAxisBoard.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/ScrollableArea/ScrollableAreaTwoAxisBoard.doc.mjs",
+      "targetPath": "examples/blocks/components/ScrollableArea/ScrollableAreaTwoAxisBoard.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "Card",
+        "Layout",
+        "ScrollableArea",
+        "Text"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
       "id": "block:SectionVariants",
       "kind": "block-template",
       "name": "Section — Variants",
@@ -12392,6 +12635,30 @@
       "exclusion": null
     },
     {
+      "id": "block:TableBulkActionsTable",
+      "kind": "block-template",
+      "name": "Table: Bulk Actions",
+      "description": "Controlled row selection with the reusable TableSelectionToolbar rendered in flow above the table. Product actions occupy the logical start; synchronized selection count and complete clear action occupy the logical end.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/Table/TableBulkActionsTable.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/Table/TableBulkActionsTable.doc.mjs",
+      "targetPath": "examples/blocks/components/Table/TableBulkActionsTable.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "Button",
+        "Table"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
       "id": "block:TableColumnSettingsTable",
       "kind": "block-template",
       "name": "Table — Column Settings",
@@ -12434,6 +12701,33 @@
       "components": [
         "PowerSearch",
         "Table"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:TableFloatingBulkActionsTable",
+      "kind": "block-template",
+      "name": "Table: Floating Bulk Actions",
+      "description": "The reusable TableSelectionToolbar inside a capped, self-contained scroll region for a long non-sticky table below metric cards. The caller-owned sticky placement keeps actions 16px from the example scrollport without moving the table when selection changes.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/Table/TableFloatingBulkActionsTable.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/Table/TableFloatingBulkActionsTable.doc.mjs",
+      "targetPath": "examples/blocks/components/Table/TableFloatingBulkActionsTable.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core",
+        "@stylexjs/stylex"
+      ],
+      "components": [
+        "Button",
+        "ScrollableArea",
+        "Table",
+        "theme"
       ],
       "doneCriteria": [
         "Generated source preserves the public upstream implementation and copyright header.",
@@ -13912,6 +14206,104 @@
       "exclusion": null
     },
     {
+      "id": "block:TimerFormats",
+      "kind": "block-template",
+      "name": "Timer — Formats",
+      "description": "Elapsed compact units and stopwatch clock notation shown from the same start time.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/Timer/TimerFormats.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/Timer/TimerFormats.doc.mjs",
+      "targetPath": "examples/blocks/components/Timer/TimerFormats.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "Layout",
+        "Text",
+        "Timer"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:TimerInline",
+      "kind": "block-template",
+      "name": "Timer — Inline",
+      "description": "A Timer composed into status copy while inheriting the surrounding typography.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/Timer/TimerInline.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/Timer/TimerInline.doc.mjs",
+      "targetPath": "examples/blocks/components/Timer/TimerInline.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "Text",
+        "Timer"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:TimerShowcase",
+      "kind": "block-template",
+      "name": "Timer",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/Timer/TimerShowcase.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/Timer/TimerShowcase.doc.mjs",
+      "targetPath": "examples/blocks/components/Timer/TimerShowcase.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "Layout",
+        "Text",
+        "Timer"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "block:TimerTypography",
+      "kind": "block-template",
+      "name": "Timer — Typography",
+      "description": "Timer using its Timestamp-matched default typography and an emphasized override.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/blocks/components/Timer/TimerTypography.tsx",
+      "requirementPath": "packages/cli/assets/templates/blocks/components/Timer/TimerTypography.doc.mjs",
+      "targetPath": "examples/blocks/components/Timer/TimerTypography.tsx",
+      "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
+      "dependencies": [
+        "@astryxdesign/core"
+      ],
+      "components": [
+        "Layout",
+        "Text",
+        "Timer"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
       "id": "block:TimestampAutoFormat",
       "kind": "block-template",
       "name": "Timestamp — Auto",
@@ -14894,7 +15286,7 @@
       "id": "block:ToolbarTableFilter",
       "kind": "block-template",
       "name": "Toolbar — Table Filter",
-      "description": "A compact toolbar with a search input, Status and Priority filter selectors, and an overflow menu. Use above a data table to let users search, filter, and access view options.",
+      "description": "Filter bar above a table: a search box leads the row, each field beside it is a closed trigger that doubles as its own filter chip — the bare field name unset, the whole clause once set — and the clauses fold from the end into a count as the row narrows, followed by a live result count, a clear all, and a column picker. Use to search, filter, and narrow flat rows of records such as jobs, orders, tickets, or users.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/blocks/components/Toolbar/ToolbarTableFilter.tsx",
       "requirementPath": "packages/cli/assets/templates/blocks/components/Toolbar/ToolbarTableFilter.doc.mjs",
@@ -14902,15 +15294,25 @@
       "rationale": "Public Astryx block template; include it as exact component-usage context for v0 rather than recreating component recipes.",
       "dependencies": [
         "@astryxdesign/core",
-        "@heroicons/react"
+        "@stylexjs/stylex",
+        "lucide-react"
       ],
       "components": [
+        "Button",
+        "CheckboxList",
+        "EmptyState",
+        "Icon",
         "Layout",
-        "MoreMenu",
+        "Link",
+        "OverflowList",
+        "Popover",
+        "Section",
         "Selector",
         "Table",
+        "Text",
         "TextInput",
-        "Toolbar"
+        "Toolbar",
+        "theme"
       ],
       "doneCriteria": [
         "Generated source preserves the public upstream implementation and copyright header.",
@@ -16139,7 +16541,7 @@
       "id": "page:ai-chat",
       "kind": "page-template",
       "name": "AI Chat Conversation",
-      "description": "Transcript of alternating turns carrying mixed rich content inline (markdown, code blocks, collapsible tool-call output) beside a resizable artifact panel that holds generated output while the stream keeps scrolling. Chat, conversation, assistant, messages, or copilot thread.",
+      "description": "Transcript of alternating turns carrying mixed rich content inline (markdown, code blocks, collapsible tool-call output) beside a resizable artifact panel that holds generated output while the stream keeps scrolling.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/ai-chat/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/ai-chat/template.doc.mjs",
@@ -16180,7 +16582,7 @@
       "id": "page:ai-chat-landing",
       "kind": "page-template",
       "name": "AI Chat Landing",
-      "description": "Zero-state entry surface centered on a single composer with suggestion chips instead of history, sized for the moment before any content exists. The empty counterpart to a transcript. Chat, conversation, assistant, prompt, or messages launcher.",
+      "description": "Zero-state entry surface centered on a single composer with suggestion chips instead of history, sized for the moment before any content exists. The empty counterpart to a transcript.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/ai-chat-landing/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/ai-chat-landing/template.doc.mjs",
@@ -16213,7 +16615,7 @@
       "id": "page:blank",
       "kind": "page-template",
       "name": "Blank",
-      "description": "Bare scaffold: one heading slot, one empty content region, no navigation and no chrome. The starting point when every other layout imposes more structure than wanted. Blank, empty, stub, placeholder, or minimal scaffold.",
+      "description": "Bare scaffold: one heading slot, one empty content region, no navigation and no chrome. The starting point when every other layout imposes more structure than wanted.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/blank/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/blank/template.doc.mjs",
@@ -16234,7 +16636,7 @@
       "id": "page:canvas-editor",
       "kind": "page-template",
       "name": "Canvas Editor",
-      "description": "Layered artboard workspace: document tabs over a layer rail, a fixed-size frame you zoom on a muted backdrop, and an inspector of position, type, and filter fields that retargets to the selected layer. Objects hold a coordinate rather than reflowing, so moving one never moves another. Design tool, artboard, poster, graphic, image, or slide editor.",
+      "description": "Layered artboard workspace: document tabs over a layer rail, a fixed-size frame you zoom on a muted backdrop, and an inspector of position, type, and filter fields that retargets to the selected layer. Objects hold a coordinate rather than reflowing, so moving one never moves another.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/canvas-editor/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/canvas-editor/template.doc.mjs",
@@ -16284,7 +16686,7 @@
       "id": "page:centered-hero",
       "kind": "page-template",
       "name": "Centered Hero",
-      "description": "Symmetrical centered stack (headline, short blurb, paired call-to-action buttons) resting on one wide full-bleed picture, with nothing on either flank competing. Hero, banner, splash, landing image, or marketing masthead.",
+      "description": "Symmetrical centered stack (headline, short blurb, paired call-to-action buttons) resting on one wide full-bleed picture, with nothing on either flank competing.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/centered-hero/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/centered-hero/template.doc.mjs",
@@ -16356,7 +16758,7 @@
       "id": "page:classic-gallery",
       "kind": "page-template",
       "name": "Classic Gallery",
-      "description": "Uniform grid of equal-ratio media tiles under a centered intro, with filter tabs that narrow the set in place. Regular rhythm, unlike the variable-height masonry variant. Gallery, photos, images, pictures, or portfolio index.",
+      "description": "Uniform grid of equal-ratio media tiles under a centered intro, with filter tabs that narrow the set in place. Regular rhythm, unlike the variable-height masonry variant.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/classic-gallery/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/classic-gallery/template.doc.mjs",
@@ -16384,7 +16786,7 @@
       "id": "page:contact-form",
       "kind": "page-template",
       "name": "Contact Form",
-      "description": "Flat single-column form mixing control types (text, pill toggles, dropdowns, long free-text) landing on one full-width submit. No steps, no branching, no summary rail. Contact, lead capture, enquiry, survey, or intake form.",
+      "description": "Flat single-column form mixing control types (text, pill toggles, dropdowns, long free-text) landing on one full-width submit. No steps, no branching, no summary rail.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/contact-form/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/contact-form/template.doc.mjs",
@@ -16424,7 +16826,7 @@
       "id": "page:dashboard",
       "kind": "page-template",
       "name": "Analytics Dashboard",
-      "description": "Three-band analytics: a row of headline tiles, then charts, then supporting tables, all re-reading from one global filter bar. Breadth over depth, a summary surface rather than a drill-down. Dashboard, overview, metrics, stats, analytics, reporting, or insights.",
+      "description": "Three-band analytics: a row of headline tiles, then charts, then supporting tables, all re-reading from one global filter bar. Breadth over depth, a summary surface rather than a drill-down.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/dashboard/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/dashboard/template.doc.mjs",
@@ -16458,7 +16860,7 @@
       "id": "page:dashboard-alert-rail",
       "kind": "page-template",
       "name": "Service Monitoring Dashboard",
-      "description": "Always-on analytics with a triage rail: status-colored tiles with sparklines, multi-series time charts over a switchable window, and an independently scrolling alert column that folds into the content when narrow. Monitoring, uptime, health, latency, alerting, incidents, or observability.",
+      "description": "Always-on analytics with a triage rail: status-colored tiles with sparklines, multi-series time charts over a switchable window, and an independently scrolling alert column that folds into the content when narrow.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/dashboard-alert-rail/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/dashboard-alert-rail/template.doc.mjs",
@@ -16498,7 +16900,7 @@
       "id": "page:dashboard-cohort-funnel",
       "kind": "page-template",
       "name": "Funnel & Cohort Dashboard",
-      "description": "Analytics for sequence and retention questions, pairing two shapes a plain dashboard cannot hold: a staged funnel where each step reads as drop-off against the one before, and a two-axis cohort matrix rendered as a heatmap. Conversion, drop-off, activation, churn, or retention reporting.",
+      "description": "Analytics for sequence and retention questions, pairing two shapes a plain dashboard cannot hold: a staged funnel where each step reads as drop-off against the one before, and a two-axis cohort matrix rendered as a heatmap.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/dashboard-cohort-funnel/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/dashboard-cohort-funnel/template.doc.mjs",
@@ -16534,7 +16936,7 @@
       "id": "page:dashboard-comparison",
       "kind": "page-template",
       "name": "Data Dashboard",
-      "description": "Comparison-heavy analytics behind a persistent filter bar: tiles that each carry an inline sparkline and several period-over-period deltas, then segmented breakdowns underneath. Every number is shown against another number. Dashboard, metrics, stats, analytics, trends, or reporting.",
+      "description": "Comparison-heavy analytics behind a persistent filter bar: tiles that each carry an inline sparkline and several period-over-period deltas, then segmented breakdowns underneath. Every number is shown against another number.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/dashboard-comparison/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/dashboard-comparison/template.doc.mjs",
@@ -16571,7 +16973,7 @@
       "id": "page:dashboard-composition",
       "kind": "page-template",
       "name": "Portfolio Dashboard",
-      "description": "Analytics for a value-over-time question: balance and change tiles above a stacked area chart of composition through time, closing on a ranked table of the largest contributors. Portfolio, holdings, positions, returns, allocation, investments, or performance reporting.",
+      "description": "Analytics for a value-over-time question: balance and change tiles above a stacked area chart of composition through time, closing on a ranked table of the largest contributors.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/dashboard-composition/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/dashboard-composition/template.doc.mjs",
@@ -16608,7 +17010,7 @@
       "id": "page:dashboard-progress",
       "kind": "page-template",
       "name": "Project Status Dashboard",
-      "description": "Status analytics mixing progress and time-axis shapes: a completion donut, a horizontal timeline of dated bars against a today marker, a per-owner table with progress and status, an at-risk list, and a burndown. Project, program, milestone, roadmap, launch, or delivery status.",
+      "description": "Status analytics mixing progress and time-axis shapes: a completion donut, a horizontal timeline of dated bars against a today marker, a per-owner table with progress and status, an at-risk list, and a burndown.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/dashboard-progress/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/dashboard-progress/template.doc.mjs",
@@ -16649,7 +17051,7 @@
       "id": "page:dashboard-scorecard",
       "kind": "page-template",
       "name": "Executive Summary Dashboard",
-      "description": "Report-shaped analytics with a prose rail beside the charts: a scorecard of headline numbers with period deltas and status coloring, goal-attainment bars, a trend grid, and a written commentary column that folds beneath the content when narrow. Executive summary, business review, readout, or reporting.",
+      "description": "Report-shaped analytics with a prose rail beside the charts: a scorecard of headline numbers with period deltas and status coloring, goal-attainment bars, a trend grid, and a written commentary column that folds beneath the content when narrow.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/dashboard-scorecard/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/dashboard-scorecard/template.doc.mjs",
@@ -16725,7 +17127,7 @@
       "id": "page:documentation",
       "kind": "page-template",
       "name": "Documentation Catalog",
-      "description": "Reference landing that is pure wayfinding: a banner above a grid of category cards linking into sections, with no article content on the surface itself. Documentation, docs, guide, handbook, reference, or API index.",
+      "description": "Reference landing that is pure wayfinding: a banner above a grid of category cards linking into sections, with no article content on the surface itself.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/documentation/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/documentation/template.doc.mjs",
@@ -16754,7 +17156,7 @@
       "id": "page:documentation-design",
       "kind": "page-template",
       "name": "Documentation Design",
-      "description": "Reference article alternating prose with live rendered examples: an interactive preview, a property table, paired do and don't comparisons, and copyable code blocks. Documentation, docs, guide, reference, usage, or API entry.",
+      "description": "Reference article alternating prose with live rendered examples: an interactive preview, a property table, paired do and don't comparisons, and copyable code blocks.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/documentation-design/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/documentation-design/template.doc.mjs",
@@ -16799,7 +17201,7 @@
       "id": "page:documentation-technical",
       "kind": "page-template",
       "name": "Documentation Technical",
-      "description": "Reference article ordered as sequential numbered steps with code at each stage, plus callout cards for prerequisites and onward links. A linear walkthrough rather than a browsable reference. Getting started, install, setup, tutorial, quickstart, or onboarding guide.",
+      "description": "Reference article ordered as sequential numbered steps with code at each stage, plus callout cards for prerequisites and onward links. A linear walkthrough rather than a browsable reference.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/documentation-technical/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/documentation-technical/template.doc.mjs",
@@ -16835,7 +17237,7 @@
       "id": "page:editor",
       "kind": "page-template",
       "name": "Page Editor",
-      "description": "Three-pane authoring workspace: a source palette on one flank, a live canvas in the middle, and an inspector that retargets to whatever is selected. Drag and drop to reorder, edit to see it render immediately. Builder, composer, drag and drop, page builder, or WYSIWYG editor.",
+      "description": "Three-pane authoring workspace: a source palette on one flank, a live canvas in the middle, and an inspector that retargets to whatever is selected. Drag and drop to reorder, edit to see it render immediately.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/editor/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/editor/template.doc.mjs",
@@ -16878,7 +17280,7 @@
       "id": "page:file-explorer",
       "kind": "page-template",
       "name": "File Explorer",
-      "description": "Hierarchical browser that drills through nested levels as adjacent columns rather than replacing the list each time, with breadcrumb history, switchable list and grid density, and a metadata pane for the selected node. Files, folders, directory, tree, or Finder-style navigator.",
+      "description": "Hierarchical browser that drills through nested levels as adjacent columns rather than replacing the list each time, with breadcrumb history, switchable list and grid density, and a metadata pane for the selected node.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/file-explorer/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/file-explorer/template.doc.mjs",
@@ -16911,7 +17313,7 @@
       "id": "page:form-two-column",
       "kind": "page-template",
       "name": "Two-column Form",
-      "description": "Form split into two columns beneath a hero header: inputs on one flank, a persistent context panel opposite that stays put while the fields scroll. Flat, single submit, no steps. Contact, lead capture, intake, request, or enquiry form.",
+      "description": "Form split into two columns beneath a hero header: inputs on one flank, a persistent context panel opposite that stays put while the fields scroll. Flat, single submit, no steps.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/form-two-column/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/form-two-column/template.doc.mjs",
@@ -16947,7 +17349,7 @@
       "id": "page:form-wizard",
       "kind": "page-template",
       "name": "Form Wizard",
-      "description": "Linear multi-step form that moves through one panel at a time, with a horizontal progress track pinned above rather than running down a rail, so every step keeps the full content width for its fields. Only the current step renders, unlike an accordion where each section expands into one long scrolling form. Each advance is validated, and a step left broken stays flagged to jump back to. Wizard, stepper, multi-step, onboarding, setup, signup, or guided flow.",
+      "description": "Linear multi-step form that moves through one panel at a time, with a horizontal progress track pinned above rather than running down a rail, so every step keeps the full content width for its fields. Only the current step renders, unlike an accordion where each section expands into one long scrolling form. Each advance is validated, and a step left broken stays flagged to jump back to.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/form-wizard/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/form-wizard/template.doc.mjs",
@@ -17134,7 +17536,7 @@
       "id": "page:gallery-hero",
       "kind": "page-template",
       "name": "Gallery Hero",
-      "description": "Centered stack (headline, short blurb, call-to-action buttons) resolving into a multi-image photo grid rather than one wide full-bleed picture, so the imagery reads as a set. Hero, banner, splash, landing image, masthead, or gallery intro.",
+      "description": "Centered stack (headline, short blurb, call-to-action buttons) resolving into a multi-image photo grid rather than one wide full-bleed picture, so the imagery reads as a set.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/gallery-hero/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/gallery-hero/template.doc.mjs",
@@ -17163,7 +17565,7 @@
       "id": "page:ide",
       "kind": "page-template",
       "name": "IDE",
-      "description": "Dense multi-pane workspace of resizable, collapsible regions: a hierarchy tree on one flank, tabbed documents in the middle, a docked drawer along the bottom, an inspector opposite. Drag a divider to resize or collapse any of them. Editor, IDE, workbench, terminal, or development environment.",
+      "description": "Dense multi-pane workspace of resizable, collapsible regions: a hierarchy tree on one flank, tabbed documents in the middle, a docked drawer along the bottom, an inspector opposite. Drag a divider to resize or collapse any of them.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/ide/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/ide/template.doc.mjs",
@@ -17199,7 +17601,7 @@
       "id": "page:incident-console",
       "kind": "page-template",
       "name": "Incident Console",
-      "description": "Dense row queue with an inspector: severity-coded rows grouped by status, a saved-search filter bar, a segmented status control, and a resizable detail pane for the selected row. Rows, not cards, sized for scanning volume. Incident, alert, on-call, outage, ticket, or triage console.",
+      "description": "Dense row queue with an inspector: severity-coded rows grouped by status, a saved-search filter bar, a segmented status control, and a resizable detail pane for the selected row. Rows, not cards, sized for scanning volume.",
       "upstreamStatus": "wip",
       "sourcePath": "packages/cli/assets/templates/pages/incident-console/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/incident-console/template.doc.mjs",
@@ -17237,7 +17639,7 @@
       "id": "page:kanban-board",
       "kind": "page-template",
       "name": "Kanban Board",
-      "description": "Horizontal lanes of draggable cards where the column itself is the status, so drag and drop between lanes is the state change. Fixed columns, variable-height cards. Kanban, board, swimlane, sprint, backlog, tasks, or pipeline.",
+      "description": "Horizontal lanes of draggable cards where the column itself is the status, so drag and drop between lanes is the state change. Fixed columns, variable-height cards.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/kanban-board/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/kanban-board/template.doc.mjs",
@@ -17276,7 +17678,7 @@
       "id": "page:library",
       "kind": "page-template",
       "name": "Card Grid",
-      "description": "Searchable, browsable card grid with filter tabs and a real empty state: uniform tiles organized by topic, narrowing in place, with no detail surface behind them. Catalog, index, directory, library, browse, or gallery of entries.",
+      "description": "Searchable, browsable card grid with filter tabs and a real empty state: uniform tiles organized by topic, narrowing in place, with no detail surface behind them.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/library/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/library/template.doc.mjs",
@@ -17311,7 +17713,7 @@
       "id": "page:login",
       "kind": "page-template",
       "name": "Basic Login",
-      "description": "Minimal centered credential form on a plain ground: two fields and a submit, nothing competing for attention. The least-chrome entry surface. Login, sign in, signin, authentication, credentials, or account access.",
+      "description": "Minimal centered credential form on a plain ground: two fields and a submit, nothing competing for attention. The least-chrome entry surface.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/login/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/login/template.doc.mjs",
@@ -17342,7 +17744,7 @@
       "id": "page:login-card",
       "kind": "page-template",
       "name": "Login Card",
-      "description": "Credential form inside an elevated centered card, third-party provider buttons separated from the fields by a divider, secondary sign-up and legal links beneath. Login, sign in, signin, authentication, credentials, social, or account access.",
+      "description": "Credential form inside an elevated centered card, third-party provider buttons separated from the fields by a divider, secondary sign-up and legal links beneath.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/login-card/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/login-card/template.doc.mjs",
@@ -17374,7 +17776,7 @@
       "id": "page:login-split",
       "kind": "page-template",
       "name": "Login Split",
-      "description": "Credential form filling one half of a two-pane split, full-bleed media holding the other. Same fields as the card variant, but the layout carries brand imagery. Login, sign in, signin, authentication, credentials, or account access.",
+      "description": "Credential form filling one half of a two-pane split, full-bleed media holding the other. Same fields as the card variant, but the layout carries brand imagery.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/login-split/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/login-split/template.doc.mjs",
@@ -17409,7 +17811,7 @@
       "id": "page:login-sso",
       "kind": "page-template",
       "name": "Login SSO",
-      "description": "Progressive credential flow that branches on input: the email domain resolves an identity provider and redirects, with a password path as fallback. Two-stage rather than one form. Single sign-on, SSO, SAML, enterprise login, directory, or corporate authentication.",
+      "description": "Progressive credential flow that branches on input: the email domain resolves an identity provider and redirects, with a password path as fallback. Two-stage rather than one form.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/login-sso/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/login-sso/template.doc.mjs",
@@ -17443,7 +17845,7 @@
       "id": "page:messaging-shell",
       "kind": "page-template",
       "name": "Messaging Shell",
-      "description": "Four-column nested navigation narrowing left to right (team workspace, channel list, message stream, thread panel) where each column scopes the next. Dense rows, zero cards. Team messaging, chat, channels, threads, inbox, direct message, or conversation workspace.",
+      "description": "Four-column nested navigation narrowing left to right (team workspace, channel list, message stream, thread panel) where each column scopes the next. Dense rows, zero cards.",
       "upstreamStatus": "wip",
       "sourcePath": "packages/cli/assets/templates/pages/messaging-shell/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/messaging-shell/template.doc.mjs",
@@ -17480,7 +17882,7 @@
       "id": "page:mixed-gallery",
       "kind": "page-template",
       "name": "Mixed Gallery",
-      "description": "Masonry grid of variable-height tiles that pack against each other instead of cropping to a shared ratio, captioned per tile. Irregular rhythm, unlike the uniform gallery. Photos, images, pictures, portfolio, masonry, or media wall.",
+      "description": "Masonry grid of variable-height tiles that pack against each other instead of cropping to a shared ratio, captioned per tile. Irregular rhythm, unlike the uniform gallery.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/mixed-gallery/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/mixed-gallery/template.doc.mjs",
@@ -17505,7 +17907,7 @@
       "id": "page:payment-form",
       "kind": "page-template",
       "name": "Checkout Form",
-      "description": "Long sectioned form running beside a summary that stays visible while the fields scroll and recalculates as they change, ending on a terminal confirm of the total. Sections run contact, address, delivery choice, then card details. Checkout, payment, billing, cart, buyer, or purchase.",
+      "description": "Long sectioned form running beside a summary that stays visible while the fields scroll and recalculates as they change, ending on a terminal confirm of the total. Sections run contact, address, delivery choice, then card details.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/payment-form/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/payment-form/template.doc.mjs",
@@ -17549,7 +17951,7 @@
       "id": "page:product-detail",
       "kind": "page-template",
       "name": "Product Detail",
-      "description": "Single-item detail pairing a media gallery with a selection column: variant swatches, a quantity stepper, primary and secondary commit actions, and collapsible specification sections below. Product, listing, item, catalog entry, or storefront detail.",
+      "description": "Single-item detail pairing a media gallery with a selection column: variant swatches, a quantity stepper, primary and secondary commit actions, and collapsible specification sections below.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/product-detail/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/product-detail/template.doc.mjs",
@@ -17585,7 +17987,7 @@
       "id": "page:product-gallery",
       "kind": "page-template",
       "name": "Product Gallery",
-      "description": "Uniform card grid where every tile carries media, title, supporting line, and a price. Browse-to-select only, with no filtering and no detail surface. Products, catalog, storefront, shop, listings, or ecommerce grid.",
+      "description": "Uniform card grid where every tile carries media, title, supporting line, and a price. Browse-to-select only, with no filtering and no detail surface.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/product-gallery/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/product-gallery/template.doc.mjs",
@@ -17615,7 +18017,7 @@
       "id": "page:settings",
       "kind": "page-template",
       "name": "Settings Form",
-      "description": "Preferences as one continuously scrolling form, sections stacked in order with no navigation between them. The simplest settings shape: everything reachable by scrolling. Settings, preferences, configuration, options, or account.",
+      "description": "Preferences as one continuously scrolling form, sections stacked in order with no navigation between them. The simplest settings shape: everything reachable by scrolling.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/settings/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/settings/template.doc.mjs",
@@ -17649,7 +18051,7 @@
       "id": "page:settings-dialog",
       "kind": "page-template",
       "name": "Settings Dialog",
-      "description": "Preferences inside a modal container with searchable section navigation, so configuration happens without leaving whatever is underneath. Grouped toggles, live preview of appearance choices, rebindable shortcuts. Settings, preferences, configuration, options, or modal dialog.",
+      "description": "Preferences inside a modal container with searchable section navigation, so configuration happens without leaving whatever is underneath. Grouped toggles, live preview of appearance choices, rebindable shortcuts.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/settings-dialog/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/settings-dialog/template.doc.mjs",
@@ -17700,7 +18102,7 @@
       "id": "page:settings-sidebar",
       "kind": "page-template",
       "name": "Settings Panels",
-      "description": "Preferences split into nav-switched panels: a persistent section list swaps the pane beside it, and rows edit in place rather than opening a separate form. Settings, preferences, configuration, options, or account panels.",
+      "description": "Preferences split into nav-switched panels: a persistent section list swaps the pane beside it, and rows edit in place rather than opening a separate form.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/settings-sidebar/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/settings-sidebar/template.doc.mjs",
@@ -17739,7 +18141,7 @@
       "id": "page:shell-nav",
       "kind": "page-template",
       "name": "Shell Nav",
-      "description": "Application frame combining both navigation axes: a top menu bar with command-palette search over a resizable hierarchy rail, wrapping placeholder content. For when one axis is not enough. Shell, chrome, layout frame, navigation, sidebar, or menu bar.",
+      "description": "Application frame combining both navigation axes: a top menu bar with command-palette search over a resizable hierarchy rail, wrapping placeholder content. For when one axis is not enough.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/shell-nav/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/shell-nav/template.doc.mjs",
@@ -17779,7 +18181,7 @@
       "id": "page:shell-side-nav",
       "kind": "page-template",
       "name": "Side Nav",
-      "description": "Application frame with a single collapsible, resizable left rail carrying grouped history and search, wrapping the main content. Vertical navigation only, no top bar. Shell, chrome, layout frame, sidebar, drawer, left rail, or navigation.",
+      "description": "Application frame with a single collapsible, resizable left rail carrying grouped history and search, wrapping the main content. Vertical navigation only, no top bar.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/shell-side-nav/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/shell-side-nav/template.doc.mjs",
@@ -17812,7 +18214,7 @@
       "id": "page:shell-top-nav",
       "kind": "page-template",
       "name": "Top Nav",
-      "description": "Application frame with horizontal navigation only: a centered bar whose items open full-width mega-menu panels, over placeholder content that keeps the entire width. Shell, chrome, layout frame, header, menu, topbar, or navigation.",
+      "description": "Application frame with horizontal navigation only: a centered bar whose items open full-width mega-menu panels, over placeholder content that keeps the entire width.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/shell-top-nav/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/shell-top-nav/template.doc.mjs",
@@ -17846,7 +18248,7 @@
       "id": "page:side-gallery",
       "kind": "page-template",
       "name": "Side Gallery",
-      "description": "Asymmetric split section: a copy column of headline, supporting text, and links held against a clustered image collage opposite. Deliberately off-balance, unlike the centered hero. Feature banner, split section, marketing, or gallery intro.",
+      "description": "Asymmetric split section: a copy column of headline, supporting text, and links held against a clustered image collage opposite. Deliberately off-balance, unlike the centered hero.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/side-gallery/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/side-gallery/template.doc.mjs",
@@ -17874,7 +18276,7 @@
       "id": "page:table",
       "kind": "page-template",
       "name": "Simple Table",
-      "description": "Flat row collection where columns sort, rows select into a bulk-action toolbar, and each row carries an overflow menu. Sortable but ungrouped, with no detail pane, the baseline shape. Table, list, rows, records, grid, spreadsheet, or roster.",
+      "description": "Flat row collection where columns sort, rows select into a bulk-action toolbar, and each row carries an overflow menu. Sortable but ungrouped, with no detail pane, the baseline shape.",
       "upstreamStatus": "wip",
       "sourcePath": "packages/cli/assets/templates/pages/table/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/table/template.doc.mjs",
@@ -17892,10 +18294,85 @@
       "exclusion": "Included and explicitly labeled WIP; the bundle does not promote it to ready."
     },
     {
+      "id": "page:table-collapsible",
+      "kind": "page-template",
+      "name": "Collapsible Table",
+      "description": "Several tables on one page, each in a collapsible card with its own columns — for groups that do not share a schema, where one table would stand full of empty cells. One time range drives them all, and rows expand into a history chart. Accounts, integrations, sections, sort, expand, or collapse.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/pages/table-collapsible/page.tsx",
+      "requirementPath": "packages/cli/assets/templates/pages/table-collapsible/template.doc.mjs",
+      "targetPath": "examples/templates/table-collapsible/page.tsx",
+      "rationale": "Public Astryx page template in Table - Grouped; include it so v0 can start from the official composition instead of inventing a parallel recipe.",
+      "dependencies": [
+        "@astryxdesign/core",
+        "@heroicons/react",
+        "@stylexjs/stylex",
+        "recharts"
+      ],
+      "components": [
+        "Badge",
+        "Button",
+        "Card",
+        "Collapsible",
+        "Icon",
+        "Layout",
+        "ProgressBar",
+        "SegmentedControl",
+        "Skeleton",
+        "Table",
+        "Text",
+        "Token",
+        "theme"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
+      "id": "page:table-comparison",
+      "kind": "page-template",
+      "name": "Comparison Table",
+      "description": "Transposed matrix that puts candidates in the columns and criteria in grouped rows, with a pinned label column that survives horizontal scroll, columns you can swap or add, and best-in-row marks you can toggle. Compare, comparison, matrix, spec sheet, feature grid, pricing table, benchmark, frozen column, sticky column, or side-by-side.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/pages/table-comparison/page.tsx",
+      "requirementPath": "packages/cli/assets/templates/pages/table-comparison/template.doc.mjs",
+      "targetPath": "examples/templates/table-comparison/page.tsx",
+      "rationale": "Public Astryx page template in Table - Comparison; include it so v0 can start from the official composition instead of inventing a parallel recipe.",
+      "dependencies": [
+        "@astryxdesign/core",
+        "@stylexjs/stylex",
+        "lucide-react",
+        "recharts"
+      ],
+      "components": [
+        "Button",
+        "Card",
+        "Icon",
+        "Layout",
+        "ProgressBar",
+        "Selector",
+        "Switch",
+        "Table",
+        "Text",
+        "Tooltip",
+        "VisuallyHidden",
+        "theme"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
       "id": "page:table-filter",
       "kind": "page-template",
       "name": "Filterable Table",
-      "description": "Flat row collection built around progressive filtering: a token bar that escalates into full query syntax, saved views that persist a filter set, column and grouping options, and a resizable detail pane. Table, list, rows, records, grid, search, or filtered dataset.",
+      "description": "Flat row collection built around progressive filtering: a token bar that escalates into full query syntax, saved views that persist a filter set, column and grouping options, and a resizable detail pane.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/table-filter/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/table-filter/template.doc.mjs",
@@ -17956,7 +18433,7 @@
       "id": "page:table-grouped",
       "kind": "page-template",
       "name": "Grouped Table",
-      "description": "Row collection bundled into collapsible sections with per-group counts, so a long list reads as a handful of blocks that expand and collapse. Query filtering and a resizable inspector for the selected row. Table, list, rows, records, grid, or grouped dataset.",
+      "description": "Row collection bundled into collapsible sections with per-group counts, so a long list reads as a handful of blocks that expand and collapse. Query filtering and a resizable inspector for the selected row.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/table-grouped/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/table-grouped/template.doc.mjs",
@@ -17998,7 +18475,7 @@
       "id": "page:table-inbox",
       "kind": "page-template",
       "name": "Inbox Table",
-      "description": "Two-pane message queue: the table indexes a reading pane rather than being the destination, with a divider you drag to resize. Rows stack when the table narrows, not the window; threads read as collapsible messages; replying opens a composer that leaves the list live. Inbox, mail, email, conversations, thread, triage, reading pane, split pane, resize, collapse, compose, or notifications.",
+      "description": "Two-pane message queue: the table indexes a reading pane rather than being the destination, with a divider you drag to resize. Rows stack when the table narrows, not the window; threads read as collapsible messages; replying opens a composer that leaves the list live.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/table-inbox/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/table-inbox/template.doc.mjs",
@@ -18048,7 +18525,7 @@
       "id": "page:table-page",
       "kind": "page-template",
       "name": "Searchable Table",
-      "description": "Flat table of uniform rows under a block of record-level facts, narrowed three ways at once — a full-text search box, a scope toggle, and per-column popovers — with sortable and filterable columns, per-row hover detail, and totals derived from the visible rows that flag themselves as partial while a filter is on. The shape for one homogeneous list, not nested rows or groups with their own columns. Search, filter, sort, table, data table, flat rows, records, dataset, or totals.",
+      "description": "Flat table of uniform rows under a block of record-level facts, narrowed three ways at once — a full-text search box, a scope toggle, and per-column popovers — with sortable and filterable columns, per-row hover detail, and totals derived from the visible rows that flag themselves as partial while a filter is on. The shape for one homogeneous list, not nested rows or groups with their own columns.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/table-page/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/table-page/template.doc.mjs",
@@ -18081,10 +18558,58 @@
       "exclusion": null
     },
     {
+      "id": "page:table-tree",
+      "kind": "page-template",
+      "name": "Tree Table",
+      "description": "Hierarchical table where every parent row rolls up from its children — a code repository whose folders show the newest commit beneath them, beside a detail sidebar and a rendered README. Columns resize, siblings sort within their own level, arrow keys walk the rows, and search prunes the tree to matching branches.",
+      "upstreamStatus": "ready",
+      "sourcePath": "packages/cli/assets/templates/pages/table-tree/page.tsx",
+      "requirementPath": "packages/cli/assets/templates/pages/table-tree/template.doc.mjs",
+      "targetPath": "examples/templates/table-tree/page.tsx",
+      "rationale": "Public Astryx page template in Table - Tree/Hierarchical List; include it so v0 can start from the official composition instead of inventing a parallel recipe.",
+      "dependencies": [
+        "@astryxdesign/core",
+        "@stylexjs/stylex",
+        "lucide-react"
+      ],
+      "components": [
+        "Avatar",
+        "Badge",
+        "Breadcrumbs",
+        "Button",
+        "Card",
+        "Divider",
+        "DropdownMenu",
+        "EmptyState",
+        "Icon",
+        "IconButton",
+        "Layout",
+        "Link",
+        "Markdown",
+        "Section",
+        "SizeContext",
+        "TabList",
+        "Table",
+        "Text",
+        "TextInput",
+        "Token",
+        "Toolbar",
+        "VisuallyHidden",
+        "hooks",
+        "theme"
+      ],
+      "doneCriteria": [
+        "Generated source preserves the public upstream implementation and copyright header.",
+        "The entry type-checks against the pinned public Astryx packages.",
+        "The verification gallery mounts the entry in Chromium with no uncaught error or missing asset."
+      ],
+      "exclusion": null
+    },
+    {
       "id": "page:theme-showcase",
       "kind": "page-template",
       "name": "Theme Showcase",
-      "description": "Several unrelated product surfaces rendered together on one canvas so a token change can be judged across contexts at once. A comparison harness rather than a layout to ship. Theme, tokens, palette, typography, styling, or design system preview.",
+      "description": "Several unrelated product surfaces rendered together on one canvas so a token change can be judged across contexts at once. A comparison harness rather than a layout to ship.",
       "upstreamStatus": "ready",
       "sourcePath": "packages/cli/assets/templates/pages/theme-showcase/page.tsx",
       "requirementPath": "packages/cli/assets/templates/pages/theme-showcase/template.doc.mjs",
@@ -18192,8 +18717,8 @@
       "targetPath": "examples/themes/presets/neutral.tsx",
       "rationale": "Published Astryx preset; every public preset must be selectable in the starter and verification gallery.",
       "dependencies": [
-        "@astryxdesign/theme-neutral@0.6.3",
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/theme-neutral@0.7.0",
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The public package installs at the pinned version.",
@@ -18211,8 +18736,8 @@
       "targetPath": "examples/themes/presets/butter.tsx",
       "rationale": "Published Astryx preset; every public preset must be selectable in the starter and verification gallery.",
       "dependencies": [
-        "@astryxdesign/theme-butter@0.6.3",
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/theme-butter@0.7.0",
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The public package installs at the pinned version.",
@@ -18230,8 +18755,8 @@
       "targetPath": "examples/themes/presets/chocolate.tsx",
       "rationale": "Published Astryx preset; every public preset must be selectable in the starter and verification gallery.",
       "dependencies": [
-        "@astryxdesign/theme-chocolate@0.6.3",
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/theme-chocolate@0.7.0",
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The public package installs at the pinned version.",
@@ -18249,8 +18774,8 @@
       "targetPath": "examples/themes/presets/gothic.tsx",
       "rationale": "Published Astryx preset; every public preset must be selectable in the starter and verification gallery.",
       "dependencies": [
-        "@astryxdesign/theme-gothic@0.6.3",
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/theme-gothic@0.7.0",
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The public package installs at the pinned version.",
@@ -18268,8 +18793,8 @@
       "targetPath": "examples/themes/presets/matcha.tsx",
       "rationale": "Published Astryx preset; every public preset must be selectable in the starter and verification gallery.",
       "dependencies": [
-        "@astryxdesign/theme-matcha@0.6.3",
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/theme-matcha@0.7.0",
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The public package installs at the pinned version.",
@@ -18287,8 +18812,8 @@
       "targetPath": "examples/themes/presets/stone.tsx",
       "rationale": "Published Astryx preset; every public preset must be selectable in the starter and verification gallery.",
       "dependencies": [
-        "@astryxdesign/theme-stone@0.6.3",
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/theme-stone@0.7.0",
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The public package installs at the pinned version.",
@@ -18306,8 +18831,8 @@
       "targetPath": "examples/themes/presets/y2k.tsx",
       "rationale": "Published Astryx preset; every public preset must be selectable in the starter and verification gallery.",
       "dependencies": [
-        "@astryxdesign/theme-y2k@0.6.3",
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/theme-y2k@0.7.0",
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The public package installs at the pinned version.",
@@ -18325,7 +18850,7 @@
       "targetPath": "examples/themes/custom/runtime-theme.ts",
       "rationale": "Cindy explicitly requires custom theming; demonstrate the supported defineTheme IR and Theme provider path.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "Custom tokens and component overrides visibly apply in light and dark mode.",
@@ -18342,7 +18867,7 @@
       "targetPath": "examples/themes/custom/runtime-theme.ts",
       "rationale": "Use Astryx higher-order transforms instead of a hand-authored parallel token vocabulary.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The generated theme exposes scale-derived tokens.",
@@ -18359,7 +18884,7 @@
       "targetPath": "examples/themes/custom/runtime-theme.ts",
       "rationale": "Demonstrate stable astryx-* target customization without forking component source.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "A supported component target override applies.",
@@ -18376,8 +18901,8 @@
       "targetPath": "examples/themes/custom/built/",
       "rationale": "Exercise the production path that emits static CSS and type augmentation.",
       "dependencies": [
-        "@astryxdesign/cli@0.6.3",
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/cli@0.7.0",
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "astryx theme build succeeds from a clean install.",
@@ -18394,7 +18919,7 @@
       "targetPath": "assets/starter/app/providers.tsx",
       "rationale": "The v0 starter must preserve color-scheme behavior across generated apps.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "Light, dark, and system modes select the correct color-scheme.",
@@ -18411,7 +18936,7 @@
       "targetPath": "examples/themes/custom/media-theme.tsx",
       "rationale": "Cover Astryx inverted-surface behavior without hard-coded foreground colors.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "Foreground tokens remain legible on forced dark and light media surfaces."
@@ -18427,7 +18952,7 @@
       "targetPath": "examples/themes/custom/syntax-theme.tsx",
       "rationale": "Keep code examples on the public syntax-token contract.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "CodeBlock resolves syntax tokens from the active theme.",
@@ -18444,7 +18969,7 @@
       "targetPath": "references/theming.md",
       "rationale": "Document public loading expectations while keeping the starter network-independent.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The starter uses a system font stack with no external request.",
@@ -18474,7 +18999,7 @@
       "targetPath": "examples/components/actions.tsx",
       "rationale": "Primary, destructive, loading, and icon-only actions with preserved accessible names.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The example type-checks against the pinned package.",
@@ -18505,7 +19030,7 @@
       "targetPath": "examples/components/forms.tsx",
       "rationale": "Controlled form fields, labels, validation status, and disabled explanations.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The example type-checks against the pinned package.",
@@ -18536,7 +19061,7 @@
       "targetPath": "examples/components/layout.tsx",
       "rationale": "Token-driven responsive composition without raw layout CSS.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The example type-checks against the pinned package.",
@@ -18565,7 +19090,7 @@
       "targetPath": "examples/components/data.tsx",
       "rationale": "Sortable data, status, and pagination using stable public APIs.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The example type-checks against the pinned package.",
@@ -18594,7 +19119,7 @@
       "targetPath": "examples/components/overlays.tsx",
       "rationale": "Keyboard-accessible layered interactions and focus return.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The example type-checks against the pinned package.",
@@ -18623,7 +19148,7 @@
       "targetPath": "examples/components/navigation.tsx",
       "rationale": "Composed app chrome using child-owned slots and logical direction.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The example type-checks against the pinned package.",
@@ -18652,7 +19177,7 @@
       "targetPath": "examples/components/feedback.tsx",
       "rationale": "Persistent, transient, loading, and progress states with non-color signifiers.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The example type-checks against the pinned package.",
@@ -18683,7 +19208,7 @@
       "targetPath": "examples/components/content.tsx",
       "rationale": "Semantic content hierarchy, code, and framework-aware links.",
       "dependencies": [
-        "@astryxdesign/core@0.6.3"
+        "@astryxdesign/core@0.7.0"
       ],
       "doneCriteria": [
         "The example type-checks against the pinned package.",

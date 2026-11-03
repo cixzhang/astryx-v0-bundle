@@ -33,25 +33,71 @@ interface Task extends Record<string, unknown> {
 }
 
 const tasks: Task[] = [
-  {id: 'WF-101', task: 'Audit navigation flows', owner: people.ana, priority: 'Medium', status: 'Done', dueDay: 3},
-  {id: 'WF-104', task: 'Settings page wireframe', owner: people.drew, priority: 'High', status: 'In review', dueDay: 12},
-  {id: 'WF-107', task: 'Empty and error states', owner: people.jihoo, priority: 'High', status: 'In progress', dueDay: 14},
-  {id: 'WF-109', task: 'Onboarding checklist', owner: people.margot, priority: 'Medium', status: 'In progress', dueDay: 16},
-  {id: 'WF-112', task: 'Usability test plan', owner: people.margot, priority: 'Low', status: 'Not started', dueDay: 18},
-  {id: 'WF-102', task: 'Icon set audit', owner: people.ana, priority: 'Low', status: 'Done', dueDay: 6},
+  {
+    id: 'WF-101',
+    task: 'Audit navigation flows',
+    owner: people.ana,
+    priority: 'Medium',
+    status: 'Done',
+    dueDay: 3,
+  },
+  {
+    id: 'WF-104',
+    task: 'Settings page wireframe',
+    owner: people.drew,
+    priority: 'High',
+    status: 'In review',
+    dueDay: 12,
+  },
+  {
+    id: 'WF-107',
+    task: 'Empty and error states',
+    owner: people.jihoo,
+    priority: 'High',
+    status: 'In progress',
+    dueDay: 14,
+  },
+  {
+    id: 'WF-109',
+    task: 'Onboarding checklist',
+    owner: people.margot,
+    priority: 'Medium',
+    status: 'In progress',
+    dueDay: 16,
+  },
+  {
+    id: 'WF-112',
+    task: 'Usability test plan',
+    owner: people.margot,
+    priority: 'Low',
+    status: 'Not started',
+    dueDay: 18,
+  },
+  {
+    id: 'WF-102',
+    task: 'Icon set audit',
+    owner: people.ana,
+    priority: 'Low',
+    status: 'Done',
+    dueDay: 6,
+  },
 ];
 
 const openTasks = tasks.filter((task) => task.status !== 'Done');
 const doneTasks = tasks.filter((task) => task.status === 'Done');
 
-const statusMeta: Record<Status, {badge: 'neutral' | 'blue' | 'green'; rank: number}> = {
-  'Not started': {badge: 'neutral', rank: 0},
-  'In progress': {badge: 'blue', rank: 1},
-  'In review': {badge: 'green', rank: 2},
-  Done: {badge: 'green', rank: 3},
-};
+const statusMeta: Record<Status, {badge: 'neutral' | 'blue' | 'green'; rank: number}> =
+  {
+    'Not started': {badge: 'neutral', rank: 0},
+    'In progress': {badge: 'blue', rank: 1},
+    'In review': {badge: 'green', rank: 2},
+    Done: {badge: 'green', rank: 3},
+  };
 
-const priorityMeta: Record<Priority, {dot: 'error' | 'warning' | 'neutral'; rank: number}> = {
+const priorityMeta: Record<
+  Priority,
+  {dot: 'error' | 'warning' | 'neutral'; rank: number}
+> = {
   High: {dot: 'error', rank: 0},
   Medium: {dot: 'warning', rank: 1},
   Low: {dot: 'neutral', rank: 2},
@@ -108,7 +154,9 @@ const columns: TableColumn<Task>[] = [
     header: 'Status',
     width: pixel(130),
     sortable: true,
-    renderCell: (item) => <Badge label={item.status} variant={statusMeta[item.status].badge} />,
+    renderCell: (item) => (
+      <Badge label={item.status} variant={statusMeta[item.status].badge} />
+    ),
   },
   {
     key: 'priority',
@@ -136,7 +184,9 @@ type Filter = 'open' | 'done';
 
 export function TasksTableCard() {
   const [filter, setFilter] = useState<Filter>('open');
-  const [sort, setSort] = useState<SortState>([{sortKey: 'priority', direction: 'ascending'}]);
+  const [sort, setSort] = useState<SortState>([
+    {sortKey: 'priority', direction: 'ascending'},
+  ]);
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set());
 
   const rows = useMemo(() => {
@@ -185,7 +235,12 @@ export function TasksTableCard() {
             </Text>
           ) : null}
         </HStack>
-        <Section variant="transparent" padding={0} paddingInline={2} dividers={['bottom']}>
+        <Section
+          variant="transparent"
+          padding={0}
+          paddingInline={2}
+          dividers={['bottom']}
+        >
           <TabList
             value={filter}
             onChange={(value) => {

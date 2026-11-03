@@ -1,11 +1,7 @@
 'use client';
 
 import * as stylex from '@stylexjs/stylex';
-import {
-  EnvelopeIcon,
-  HeartIcon,
-  ShoppingBagIcon,
-} from '@heroicons/react/24/outline';
+import {EnvelopeIcon, HeartIcon, ShoppingBagIcon} from '@heroicons/react/24/outline';
 import {AspectRatio} from '@astryxdesign/core/AspectRatio';
 import {Button} from '@astryxdesign/core/Button';
 import {Card} from '@astryxdesign/core/Card';

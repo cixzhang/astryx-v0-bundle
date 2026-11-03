@@ -1,13 +1,13 @@
 # Astryx v0 bundle ledger
 
-This ledger locks the bundle scope before implementation. The machine-readable authority is [`catalog/astryx-0.6.3.json`](../catalog/astryx-0.6.3.json), which records source requirement, target entry, rationale, dependencies, done criteria, and exclusion for every entry.
+This ledger locks the bundle scope before implementation. The machine-readable authority is [`catalog/astryx-0.7.0.json`](../catalog/astryx-0.7.0.json), which records source requirement, target entry, rationale, dependencies, done criteria, and exclusion for every entry.
 
-- Astryx source: [v0.6.3](https://github.com/facebook/astryx/releases/tag/v0.6.3) at `8492ddeee2aab94cfc715384beb305d70bf9e5a6`
-- Public npm version: `0.6.3` (all stable packages aligned)
+- Astryx source: [v0.7.0](https://github.com/facebook/astryx/releases/tag/v0.7.0) at `5c4c56b16e0566df7360c2acf5bf2a1c3d953e30`
+- Public npm version: `0.7.0` (all stable packages aligned)
 - v0 contract: Design Systems 2.0, `v0.json` schema `1`
-- Scope: **54 page templates**, **646 block templates**, **7 preset themes**, **8 custom-theme capabilities**, and **8 curated component examples**
+- Scope: **57 page templates**, **661 block templates**, **7 preset themes**, **8 custom-theme capabilities**, and **8 curated component examples**
 
-All 646 public block templates are individually recorded in the machine ledger and generated under `examples/blocks/`; the human table below lists pages because they are the reusable full-surface starters.
+All 661 public block templates are individually recorded in the machine ledger and generated under `examples/blocks/`; the human table below lists pages because they are the reusable full-surface starters.
 
 ## Page templates
 
@@ -61,10 +61,13 @@ All 646 public block templates are individually recorded in the machine ledger a
 | `shell-top-nav`           | Top Nav                      | `packages/cli/assets/templates/pages/shell-top-nav/page.tsx`           | `examples/templates/shell-top-nav/page.tsx`           | `@astryxdesign/core`, `@heroicons/react`, `@stylexjs/stylex`                                | ready                  |
 | `side-gallery`            | Side Gallery                 | `packages/cli/assets/templates/pages/side-gallery/page.tsx`            | `examples/templates/side-gallery/page.tsx`            | `@astryxdesign/core`                                                                        | ready                  |
 | `table`                   | Simple Table                 | `packages/cli/assets/templates/pages/table/page.tsx`                   | `examples/templates/table/page.tsx`                   | `@astryxdesign/core`                                                                        | WIP upstream           |
+| `table-collapsible`       | Collapsible Table            | `packages/cli/assets/templates/pages/table-collapsible/page.tsx`       | `examples/templates/table-collapsible/page.tsx`       | `@astryxdesign/core`, `@heroicons/react`, `@stylexjs/stylex`, `recharts`                    | ready                  |
+| `table-comparison`        | Comparison Table             | `packages/cli/assets/templates/pages/table-comparison/page.tsx`        | `examples/templates/table-comparison/page.tsx`        | `@astryxdesign/core`, `@stylexjs/stylex`, `lucide-react`, `recharts`                        | ready                  |
 | `table-filter`            | Filterable Table             | `packages/cli/assets/templates/pages/table-filter/page.tsx`            | `examples/templates/table-filter/page.tsx`            | `@astryxdesign/core`, `@stylexjs/stylex`, `lucide-react`                                    | ready                  |
 | `table-grouped`           | Grouped Table                | `packages/cli/assets/templates/pages/table-grouped/page.tsx`           | `examples/templates/table-grouped/page.tsx`           | `@astryxdesign/core`, `@heroicons/react`                                                    | ready                  |
 | `table-inbox`             | Inbox Table                  | `packages/cli/assets/templates/pages/table-inbox/page.tsx`             | `examples/templates/table-inbox/page.tsx`             | `@astryxdesign/core`, `@heroicons/react`, `@stylexjs/stylex`                                | ready                  |
 | `table-page`              | Searchable Table             | `packages/cli/assets/templates/pages/table-page/page.tsx`              | `examples/templates/table-page/page.tsx`              | `@astryxdesign/core`, `@heroicons/react`                                                    | ready                  |
+| `table-tree`              | Tree Table                   | `packages/cli/assets/templates/pages/table-tree/page.tsx`              | `examples/templates/table-tree/page.tsx`              | `@astryxdesign/core`, `@stylexjs/stylex`, `lucide-react`                                    | ready                  |
 | `theme-showcase`          | Theme Showcase               | `packages/cli/assets/templates/pages/theme-showcase/page.tsx`          | `examples/templates/theme-showcase/page.tsx`          | `@astryxdesign/core`, `lucide-react`                                                        | ready; hidden upstream |
 | `work-item-detail`        | Work Item Detail             | `packages/cli/assets/templates/pages/work-item-detail/page.tsx`        | `examples/templates/work-item-detail/page.tsx`        | `@astryxdesign/core`, `@heroicons/react`, `@stylexjs/stylex`                                | ready                  |
 
@@ -103,7 +106,7 @@ Each page is done only when its generated source preserves upstream attribution,
 | `feedback`   | `Banner`, `Toast`, `ProgressBar`, `Skeleton`                     | `examples/components/feedback.tsx`   | Persistent, transient, loading, and progress states with non-color signifiers.        |
 | `content`    | `Heading`, `Text`, `CodeBlock`, `Markdown`, `Link`               | `examples/components/content.tsx`    | Semantic content hierarchy, code, and framework-aware links.                          |
 
-The complete component-usage surface is covered by the 646 generated public block examples; these curated examples are the small starter-facing set.
+The complete component-usage surface is covered by the 661 generated public block examples; these curated examples are the small starter-facing set.
 
 ## Explicit exclusions
 

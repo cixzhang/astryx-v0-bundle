@@ -66,12 +66,18 @@ export function CheckoutCard() {
   const toast = useToast();
   const [form, setForm] = useState(emptyForm);
   const [hasSubmitted, setHasSubmitted] = useState(false);
-  const [earliestDelivery] = useState(() => toISODate(nextWeekday(addDays(new Date(), 3))));
-  const [deliveryDate, setDeliveryDate] = useState<ISODateString | undefined>(earliestDelivery);
+  const [earliestDelivery] = useState(() =>
+    toISODate(nextWeekday(addDays(new Date(), 3))),
+  );
+  const [deliveryDate, setDeliveryDate] = useState<ISODateString | undefined>(
+    earliestDelivery,
+  );
   const {total} = getOrderTotals(cartItems, shops[themeName]);
   const isCartEmpty = cartItems.length === 0;
 
-  const missing = (Object.keys(form) as FieldName[]).filter((name) => !form[name].trim());
+  const missing = (Object.keys(form) as FieldName[]).filter(
+    (name) => !form[name].trim(),
+  );
 
   function field(name: FieldName) {
     return {
@@ -88,7 +94,9 @@ export function CheckoutCard() {
     event.preventDefault();
     setHasSubmitted(true);
     if (isCartEmpty || missing.length > 0 || !deliveryDate) return;
-    toast({body: `Order placed — ${formatMoney(total)} charged, arriving ${formatDay(deliveryDate)}`});
+    toast({
+      body: `Order placed — ${formatMoney(total)} charged, arriving ${formatDay(deliveryDate)}`,
+    });
     clearCart();
     setForm(emptyForm);
     setDeliveryDate(earliestDelivery);
@@ -160,13 +168,20 @@ export function CheckoutCard() {
               placeholder="MM / YY"
               {...field('expiry')}
             />
-            <TextInput label="CVC" autoComplete="cc-csc" placeholder="123" {...field('cvc')} />
+            <TextInput
+              label="CVC"
+              autoComplete="cc-csc"
+              placeholder="123"
+              {...field('cvc')}
+            />
           </Grid>
 
           <VStack gap={2}>
             <Button
               type="submit"
-              label={isCartEmpty ? 'Add items to check out' : `Pay ${formatMoney(total)}`}
+              label={
+                isCartEmpty ? 'Add items to check out' : `Pay ${formatMoney(total)}`
+              }
               variant="primary"
               size="lg"
               isDisabled={isCartEmpty}

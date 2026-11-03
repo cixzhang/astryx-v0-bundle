@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "astryxVersion": "0.6.3",
+  "astryxVersion": "0.7.0",
   "cases": [
     {
       "id": "analytics-dashboard",

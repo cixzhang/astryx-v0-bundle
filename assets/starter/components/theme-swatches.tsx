@@ -35,22 +35,22 @@ export function ThemeSwatches() {
         const label = `${formatThemeName(name)} theme`;
         return (
           <ToggleButton
-              key={name}
-              label={label}
-              tooltip={formatThemeName(name)}
-              isIconOnly
-              icon={
-                <img
-                  src={`/products/${name}/${imageSlots[HERO_SLOT]}.png`}
-                  alt=""
-                  width={28}
-                  height={28}
-                  {...stylex.props(styles.thumb)}
-                />
-              }
-              isPressed={themeName === name}
-              onPressedChange={() => setThemeName(name)}
-            />
+            key={name}
+            label={label}
+            tooltip={formatThemeName(name)}
+            isIconOnly
+            icon={
+              <img
+                src={`/products/${name}/${imageSlots[HERO_SLOT]}.png`}
+                alt=""
+                width={28}
+                height={28}
+                {...stylex.props(styles.thumb)}
+              />
+            }
+            isPressed={themeName === name}
+            onPressedChange={() => setThemeName(name)}
+          />
         );
       })}
     </HStack>

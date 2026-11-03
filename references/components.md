@@ -48,4 +48,4 @@ Use real Chromium for final interaction and pixel checks. Static types and DOM s
 
 ## Curated examples
 
-`examples/components/` points to official 0.6.3 showcase blocks for actions, forms, layout, data, overlays, navigation, feedback, and content. The full component-usage set is under `examples/blocks/`.
+`examples/components/` points to official 0.7.0 showcase blocks for actions, forms, layout, data, overlays, navigation, feedback, and content. The full component-usage set is under `examples/blocks/`.

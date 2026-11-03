@@ -49,41 +49,42 @@ export function ProductCard() {
             label={cartCount === 1 ? 'Cart, 1 item' : `Cart, ${cartCount} items`}
             variant="secondary"
             icon={<Icon icon={ShoppingBagIcon} />}
-            isIconOnly={cartCount === 0}>
+            isIconOnly={cartCount === 0}
+          >
             {cartCount > 0 ? cartCount : undefined}
           </Button>
         </HStack>
         <Carousel gap={3} hasSnap hasButtons aria-label={`${shop.title} products`}>
           {shop.products.map((product, index) => (
             <VStack key={product.name} gap={2} width={168} xstyle={styles.tile}>
-                <AspectRatio ratio={1}>
-                  <img
-                    src={`/products/${themeName}/${imageSlots[index]}.png`}
-                    alt={product.name}
-                    loading="lazy"
-                    {...stylex.props(styles.image)}
-                  />
-                </AspectRatio>
-                <HStack justify="between" vAlign="center" gap={2}>
-                  <VStack gap={0}>
-                    <Text weight="semibold" maxLines={1}>
-                      {product.name}
-                    </Text>
-                    <Text type="supporting" color="secondary">
-                      {product.price}
-                    </Text>
-                  </VStack>
-                  <IconButton
-                    label={`Add ${product.name} to cart`}
-                    variant="secondary"
-                    size="sm"
-                    icon={<Icon icon={PlusIcon} />}
-                    onClick={() => {
-                      addToCart(index);
-                      toast({body: `${product.name} added to cart`});
-                    }}
-                  />
-                </HStack>
+              <AspectRatio ratio={1}>
+                <img
+                  src={`/products/${themeName}/${imageSlots[index]}.png`}
+                  alt={product.name}
+                  loading="lazy"
+                  {...stylex.props(styles.image)}
+                />
+              </AspectRatio>
+              <HStack justify="between" vAlign="center" gap={2}>
+                <VStack gap={0}>
+                  <Text weight="semibold" maxLines={1}>
+                    {product.name}
+                  </Text>
+                  <Text type="supporting" color="secondary">
+                    {product.price}
+                  </Text>
+                </VStack>
+                <IconButton
+                  label={`Add ${product.name} to cart`}
+                  variant="secondary"
+                  size="sm"
+                  icon={<Icon icon={PlusIcon} />}
+                  onClick={() => {
+                    addToCart(index);
+                    toast({body: `${product.name} added to cart`});
+                  }}
+                />
+              </HStack>
             </VStack>
           ))}
         </Carousel>

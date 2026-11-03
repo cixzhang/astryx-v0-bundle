@@ -18,7 +18,8 @@ export function AstryxMark({size = 40}: {size?: number}) {
       fill="currentColor"
       role="img"
       aria-label="Astryx"
-      {...stylex.props(styles.logo)}>
+      {...stylex.props(styles.logo)}
+    >
       <path d={markPath} />
     </svg>
   );
@@ -33,7 +34,8 @@ export function AstryxWordmark({height = 32}: {height?: number}) {
       fill="currentColor"
       role="img"
       aria-label="Astryx"
-      {...stylex.props(styles.logo)}>
+      {...stylex.props(styles.logo)}
+    >
       {wordmarkPaths.map((d) => (
         <path key={d.slice(0, 24)} d={d} />
       ))}

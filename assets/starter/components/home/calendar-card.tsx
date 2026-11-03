@@ -31,7 +31,8 @@ export function CalendarCard() {
   const [focusDate, setFocusDate] = useState(offsiteDates?.start ?? fallbackFocus);
   const focusYear = focusDate.slice(0, 4);
 
-  const selectYear = (year: string) => setFocusDate(`${year}${focusDate.slice(4, 8)}01` as ISODateString);
+  const selectYear = (year: string) =>
+    setFocusDate(`${year}${focusDate.slice(4, 8)}01` as ISODateString);
 
   return (
     <Card padding={5}>
@@ -44,7 +45,8 @@ export function CalendarCard() {
           label="Year"
           value={focusYear}
           onChange={(year) => year && selectYear(year)}
-          xstyle={styles.years}>
+          xstyle={styles.years}
+        >
           {years.map((year) => (
             <ToggleButton key={year} value={year} label={year} xstyle={styles.year} />
           ))}

@@ -28,7 +28,8 @@ const styles = stylex.create({
     position: 'absolute',
     insetInline: 0,
     bottom: 0,
-    backgroundImage: 'linear-gradient(to top, rgba(20, 20, 24, 0.72), rgba(20, 20, 24, 0))',
+    backgroundImage:
+      'linear-gradient(to top, rgba(20, 20, 24, 0.72), rgba(20, 20, 24, 0))',
   },
   onImage: {
     color: '#ffffff',
@@ -60,11 +61,22 @@ export function LoanCard() {
           <Text size="lg" xstyle={styles.onImage}>
             {product.name}
           </Text>
-          <Text as="h2" size="4xl" weight="bold" textWrap="balance" xstyle={styles.onImage}>
+          <Text
+            as="h2"
+            size="4xl"
+            weight="bold"
+            textWrap="balance"
+            xstyle={styles.onImage}
+          >
             {shop.heroTagline}
           </Text>
         </VStack>
-        <Button label={`Shop now from ${product.price}`} size="lg" width="100%" xstyle={styles.pill}>
+        <Button
+          label={`Shop now from ${product.price}`}
+          size="lg"
+          width="100%"
+          xstyle={styles.pill}
+        >
           <Text color="secondary" xstyle={styles.pillText}>
             Shop now from <strong>{product.price}</strong>
           </Text>

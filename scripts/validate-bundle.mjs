@@ -32,7 +32,7 @@ const [
   evals,
 ] = await Promise.all([
   readJson('v0.json'),
-  readJson('catalog/astryx-0.6.3.json'),
+  readJson('catalog/astryx-0.7.0.json'),
   readJson('package.json'),
   readJson('assets/starter/package.json'),
   readJson('examples/manifest.json'),
@@ -102,26 +102,26 @@ failUnless(skill.split('\n').length <= 100, 'SKILL.md should stay under 100 line
 const pages = catalog.templates.filter((entry) => entry.kind === 'page-template');
 const blocks = catalog.templates.filter((entry) => entry.kind === 'block-template');
 failUnless(catalog.schemaVersion === 1, 'Catalog schema version must be 1.');
-failUnless(pages.length === 54, `Expected 54 pages, found ${pages.length}.`);
-failUnless(blocks.length === 646, `Expected 646 blocks, found ${blocks.length}.`);
-failUnless(catalog.templates.length === 700, 'Expected 700 total templates.');
+failUnless(pages.length === 57, `Expected 57 pages, found ${pages.length}.`);
+failUnless(blocks.length === 661, `Expected 661 blocks, found ${blocks.length}.`);
+failUnless(catalog.templates.length === 718, 'Expected 718 total templates.');
 failUnless(
   catalog.themes.length === 15,
   'Expected 7 presets and 8 theme capabilities.',
 );
 failUnless(catalog.components.length === 8, 'Expected 8 curated component examples.');
 failUnless(
-  catalog.source.packageVersion === '0.6.3' &&
-    catalog.source.gitTag === 'v0.6.3' &&
+  catalog.source.packageVersion === '0.7.0' &&
+    catalog.source.gitTag === 'v0.7.0' &&
     /^[0-9a-f]{40}$/.test(catalog.source.gitCommit),
-  'Catalog source must pin Astryx 0.6.3 to a full commit.',
+  'Catalog source must pin Astryx 0.7.0 to a full commit.',
 );
 const templateIds = new Set(catalog.templates.map((entry) => entry.id));
 const templatePaths = new Set(catalog.templates.map((entry) => entry.targetPath));
-failUnless(templateIds.size === 700, 'Template IDs must be unique.');
-failUnless(templatePaths.size === 700, 'Template target paths must be unique.');
+failUnless(templateIds.size === 718, 'Template IDs must be unique.');
+failUnless(templatePaths.size === 718, 'Template target paths must be unique.');
 failUnless(evals.schemaVersion === 1, 'Eval schema version must be 1.');
-failUnless(evals.astryxVersion === '0.6.3', 'Eval Astryx version mismatch.');
+failUnless(evals.astryxVersion === '0.7.0', 'Eval Astryx version mismatch.');
 failUnless(evals.cases.length >= 8, 'Expected at least 8 release-gating eval cases.');
 const evalIds = new Set(evals.cases.map((entry) => entry.id));
 const themeNames = new Set([
@@ -188,22 +188,22 @@ for (const entry of [...catalog.themes, ...catalog.components]) {
 }
 
 failUnless(
-  examplesManifest.entries.length === 700,
-  'Examples manifest must list 700 entries.',
+  examplesManifest.entries.length === 718,
+  'Examples manifest must list 718 entries.',
 );
 failUnless(
-  bundleManifest.entries.length === 700,
-  'Bundle manifest must hash 700 entries.',
+  bundleManifest.entries.length === 718,
+  'Bundle manifest must hash 718 entries.',
 );
 failUnless(
   bundleManifest.bundleVersion === packageJson.version,
   'Bundle version mismatch.',
 );
 failUnless(
-  bundleManifest.astryx.version === '0.6.3',
+  bundleManifest.astryx.version === '0.7.0',
   'Bundle Astryx version mismatch.',
 );
-const catalogContent = await readFile(path.join(root, 'catalog/astryx-0.6.3.json'));
+const catalogContent = await readFile(path.join(root, 'catalog/astryx-0.7.0.json'));
 const v0Content = await readFile(path.join(root, 'v0.json'));
 failUnless(
   bundleManifest.contractHashes.catalog === hash(catalogContent),
@@ -225,14 +225,14 @@ for (const entry of bundleManifest.entries) {
 const packagesToCheck = [packageJson, starterPackage];
 for (const manifest of packagesToCheck) {
   failUnless(
-    manifest.packageManager === 'pnpm@11.10.0',
+    manifest.packageManager === 'pnpm@12.3.4',
     `${manifest.name}: pnpm version mismatch.`,
   );
   for (const [name, version] of Object.entries(manifest.dependencies ?? {})) {
     if (name.startsWith('@astryxdesign/')) {
       failUnless(
-        version === '0.6.3',
-        `${manifest.name}: ${name} must be exactly 0.6.3.`,
+        version === '0.7.0',
+        `${manifest.name}: ${name} must be exactly 0.7.0.`,
       );
     }
     failUnless(
@@ -309,7 +309,11 @@ for (const absolute of await collectTextFiles()) {
   const content = await readFile(absolute, 'utf8');
   for (const [label, pattern] of hygienePatterns) {
     // Public npm metadata can retain an optional peer name that this bundle never installs.
-    if (relative === 'pnpm-lock.yaml' && label === 'non-public package') continue;
+    if (
+      (relative === 'pnpm-lock.yaml' || relative === 'assets/starter/pnpm-lock.yaml') &&
+      label === 'non-public package'
+    )
+      continue;
     failUnless(!pattern.test(content), `${relative}: contains ${label}.`);
   }
 }
@@ -331,5 +335,5 @@ if (errors.length > 0) {
   process.exit(1);
 }
 console.log(
-  'Validated schema, 700 templates, 15 theme entries, 8 component examples, hashes, and public hygiene.',
+  'Validated schema, 718 templates, 15 theme entries, 8 component examples, hashes, and public hygiene.',
 );

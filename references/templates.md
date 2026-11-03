@@ -1,11 +1,11 @@
 # Templates and blocks
 
-The bundle contains the complete Astryx 0.6.3 public template surface:
+The bundle contains the complete Astryx 0.7.0 public template surface:
 
-- 54 full-page templates under `examples/templates/<slug>/page.tsx`
-- 646 component and pattern blocks under `examples/blocks/`
+- 57 full-page templates under `examples/templates/<slug>/page.tsx`
+- 661 component and pattern blocks under `examples/blocks/`
 
-The exact source path, requirement metadata, dependencies, status, and target path for every entry are in `catalog/astryx-0.6.3.json`. `examples/manifest.json` is the generated lightweight runtime index.
+The exact source path, requirement metadata, dependencies, status, and target path for every entry are in `catalog/astryx-0.7.0.json`. `examples/manifest.json` is the generated lightweight runtime index.
 
 ## Choosing a starting point
 
@@ -34,7 +34,7 @@ Prefer the closest official entry over composing a lookalike from scratch. Read 
 
 The generated examples use the official Astryx CLI scaffold behavior: upstream `/template-assets/` images become a self-contained placeholder data URI and template videos become an empty source. Replace placeholders with product-owned media and meaningful alt text.
 
-Template-local third-party dependencies are explicit in the catalog. The complete set for 0.6.3 is:
+Template-local third-party dependencies are explicit in the catalog. The complete set for 0.7.0 is:
 
 - `@heroicons/react@2.2.0`
 - `@stylexjs/stylex@0.19.1`

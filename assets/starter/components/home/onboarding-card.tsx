@@ -23,7 +23,12 @@ export function OnboardingCard() {
         <Heading level={2}>Set up</Heading>
         <Stepper activeStep={activeStep - 1} orientation="vertical">
           {steps.map((step, index) => (
-            <Step key={step.label} step={index} label={step.label} description={step.description} />
+            <Step
+              key={step.label}
+              step={index}
+              label={step.label}
+              description={step.description}
+            />
           ))}
         </Stepper>
         <HStack gap={2} justify="between">

@@ -18,7 +18,11 @@ export function ShortcutsCard() {
         <Heading level={2}>Shortcuts</Heading>
         <List density="compact">
           {shortcuts.map((shortcut) => (
-            <ListItem key={shortcut.label} label={shortcut.label} endContent={<Kbd keys={shortcut.keys} />} />
+            <ListItem
+              key={shortcut.label}
+              label={shortcut.label}
+              endContent={<Kbd keys={shortcut.keys} />}
+            />
           ))}
         </List>
       </VStack>
