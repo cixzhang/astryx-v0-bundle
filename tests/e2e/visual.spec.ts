@@ -18,21 +18,15 @@ async function openReady(
 
 async function openStarter(page: Page, mode: 'light' | 'dark') {
   await page.goto('http://127.0.0.1:4174', {waitUntil: 'domcontentloaded'});
-  await expect(page.getByRole('heading', {name: 'Build with Astryx'})).toBeVisible();
+  await expect(page.getByRole('heading', {level: 1, name: 'Astryx'})).toBeVisible();
+  await expect(page.getByRole('toolbar', {name: 'Theme controls'})).toBeVisible();
 
-  await page.getByLabel('Theme preset').click();
-  await page.getByRole('option', {name: 'Custom example', exact: true}).click();
-  await page.getByLabel('Color mode').click();
-  await page
-    .getByRole('option', {
-      name: mode === 'light' ? 'Light' : 'Dark',
-      exact: true,
-    })
-    .click();
-  await expect(page.locator('html')).toHaveAttribute('data-theme', mode);
-
-  await page.getByRole('button', {name: 'Save settings'}).click();
-  await expect(page.getByRole('button', {name: 'Saved 1 times'})).toBeVisible();
+  const toDark = page.getByRole('button', {name: 'Switch to dark mode'});
+  const toLight = page.getByRole('button', {name: 'Switch to light mode'});
+  if (mode === 'dark' && (await toDark.isVisible())) await toDark.click();
+  if (mode === 'light' && (await toLight.isVisible())) await toLight.click();
+  await expect(mode === 'dark' ? toLight : toDark).toBeVisible();
+  await page.waitForFunction(() => document.getAnimations().length === 0);
 }
 
 test('starter desktop and mobile states render in real Chromium', async ({
