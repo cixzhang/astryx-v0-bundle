@@ -104,7 +104,7 @@ export function RevenueCard() {
           </VStack>
         </VStack>
 
-        <div
+        <VStack
           role="img"
           aria-label={`Daily revenue this week totaling ${currency.format(total)}, averaging ${currency.format(average)} per day`}
         >
@@ -140,7 +140,7 @@ export function RevenueCard() {
               />
             </BarChart>
           </ResponsiveContainer>
-        </div>
+        </VStack>
 
         <VStack gap={3}>
           {recentOrders.map(({label, orders, amount}, index) => (
