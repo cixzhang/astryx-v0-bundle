@@ -1,9 +1,7 @@
-'use client';
-
 import type {ComponentType} from 'react';
-import * as stylex from '@stylexjs/stylex';
 import {Grid} from '@astryxdesign/core/Grid';
 import {Layout, LayoutContent, VStack} from '@astryxdesign/core/Layout';
+import {Text} from '@astryxdesign/core/Text';
 import {VisuallyHidden} from '@astryxdesign/core/VisuallyHidden';
 import {FloatingToolbar} from '@/components/floating-toolbar';
 import {CalendarCard} from '@/components/home/calendar-card';
@@ -27,145 +25,69 @@ import {ProjectCard} from '@/components/home/project-card';
 import {ShortcutsCard} from '@/components/home/shortcuts-card';
 import {TasksTableCard} from '@/components/home/tasks-table-card';
 
-const WIDE = '@media (min-width: 1400px)';
-const THREE_UP = '@media (min-width: 1000px)';
-const TWO_UP = '@media (min-width: 720px)';
-const pageWidth = 1640;
-
-// Fixed page gutters and gaps so the controls and the card edges stay put across themes.
-const styles = stylex.create({
-  gutters: {
-    boxSizing: 'border-box',
-    width: '100%',
-    maxWidth: pageWidth,
-    marginInline: 'auto',
-    paddingInline: 24,
-    paddingTop: 24,
-    // Room for the floating toolbar so the last cards are never covered.
-    paddingBottom: 120,
-  },
-  // Wide: outer | hero + two center columns | outer. Three-up: hero across the top,
-  // Tasks + Editor over two columns beside the right column. Two-up: hero, wide, pairs.
-  collage: {
-    gridTemplateColumns: {
-      default: 'minmax(0, 1fr)',
-      [TWO_UP]: 'repeat(2, minmax(0, 1fr))',
-      [THREE_UP]: 'repeat(3, minmax(0, 1fr))',
-      [WIDE]: 'repeat(4, minmax(0, 1fr))',
-    },
-    // Below THREE_UP the full-width Tasks and Editor cards sit above the card
-    // columns, so uneven column lengths only show at the page end, never mid-page.
-    gridTemplateAreas: {
-      default: '"top" "pairA" "pairB" "wide"',
-      [TWO_UP]: '"top top" "wide wide" "pairA pairB"',
-      [THREE_UP]: '"top top top" "wide wide right" "left a right" "left b right"',
-      [WIDE]: '"left top top right" "left wide wide right" "left a b right"',
-    },
-    // Rows hug their content so the spanning outer columns don't stretch the hero row.
-    gridTemplateRows: {
-      default: 'auto',
-      [THREE_UP]: 'auto auto auto 1fr',
-      [WIDE]: 'auto auto 1fr',
-    },
-  },
-  // Below THREE_UP each pair stacks as one continuous column so a short card
-  // never leaves a row-height gap; from THREE_UP up the pair dissolves into the grid.
-  pair: {
-    display: {default: null, [THREE_UP]: 'contents'},
-  },
-  pairA: {gridArea: 'pairA'},
-  pairB: {gridArea: 'pairB'},
-  left: {gridArea: 'left'},
-  right: {gridArea: 'right'},
-  top: {gridArea: 'top'},
-  wide: {gridArea: 'wide'},
-  a: {gridArea: 'a'},
-  b: {gridArea: 'b'},
-});
-
 interface CardEntry {
   file: string;
   Component: ComponentType;
 }
 
 // Columns are loosely grouped by theme and balanced so all four end at about the same height.
-const workAndData: CardEntry[] = [
-  {file: 'revenue-card', Component: RevenueCard},
-  {file: 'project-card', Component: ProjectCard},
-  {file: 'shortcuts-card', Component: ShortcutsCard},
+const columns: CardEntry[][] = [
+  [
+    {file: 'revenue-card', Component: RevenueCard},
+    {file: 'project-card', Component: ProjectCard},
+    {file: 'shortcuts-card', Component: ShortcutsCard},
+    {file: 'plan-card', Component: PlanCard},
+    {file: 'onboarding-card', Component: OnboardingCard},
+  ],
+  [
+    {file: 'creator-card', Component: CreatorCard},
+    {file: 'loading-states-card', Component: LoadingStatesCard},
+    {file: 'empty-state-card', Component: EmptyStateCard},
+    {file: 'email-alerts-card', Component: EmailAlertsCard},
+    {file: 'file-tree-card', Component: FileTreeCard},
+  ],
+  [
+    {file: 'product-card', Component: ProductCard},
+    {file: 'order-summary-card', Component: OrderSummaryCard},
+    {file: 'checkout-card', Component: CheckoutCard},
+  ],
+  [
+    {file: 'chat-card', Component: ChatCard},
+    {file: 'calendar-card', Component: CalendarCard},
+    {file: 'loan-card', Component: LoanCard},
+  ],
 ];
-
-const peopleAndStates: CardEntry[] = [
-  {file: 'creator-card', Component: CreatorCard},
-  {file: 'loading-states-card', Component: LoadingStatesCard},
-  {file: 'empty-state-card', Component: EmptyStateCard},
-];
-
-const commerce: CardEntry[] = [
-  {file: 'product-card', Component: ProductCard},
-  {file: 'order-summary-card', Component: OrderSummaryCard},
-  {file: 'checkout-card', Component: CheckoutCard},
-  {file: 'plan-card', Component: PlanCard},
-  {file: 'onboarding-card', Component: OnboardingCard},
-];
-
-const communicationAndMedia: CardEntry[] = [
-  {file: 'chat-card', Component: ChatCard},
-  {file: 'calendar-card', Component: CalendarCard},
-  {file: 'loan-card', Component: LoanCard},
-  {file: 'email-alerts-card', Component: EmailAlertsCard},
-  {file: 'file-tree-card', Component: FileTreeCard},
-];
-
-function CardColumn({
-  cards,
-  xstyle,
-}: {
-  cards: CardEntry[];
-  xstyle?: stylex.StyleXStyles;
-}) {
-  return (
-    <VStack gap={5} xstyle={xstyle}>
-      {cards.map(({file, Component}) => (
-        <Component key={file} />
-      ))}
-    </VStack>
-  );
-}
 
 export default function Home() {
   return (
     <DemoStateProvider>
       <Layout
         height="auto"
-        contentWidth={pageWidth}
+        contentWidth={1640}
         content={
-          <LayoutContent padding={0}>
-            <VStack xstyle={styles.gutters}>
-              <main>
-                <VisuallyHidden>
-                  <p>A collage of example cards built with the Astryx design system.</p>
-                </VisuallyHidden>
-                <Grid gap={5} align="start" xstyle={styles.collage}>
-                  <VStack xstyle={styles.top}>
-                    <HeroLogo />
+          <LayoutContent role="main" padding={6}>
+            <VStack gap={5}>
+              <VisuallyHidden>
+                <Text as="p">
+                  A collage of example cards built with the Astryx design system.
+                </Text>
+              </VisuallyHidden>
+              <HeroLogo />
+              <Grid columns={{minWidth: 280, repeat: 'fit'}} gap={5} align="stretch">
+                <TasksTableCard />
+                <CodeEditorCard />
+              </Grid>
+              <Grid columns={{minWidth: 280, repeat: 'fit'}} gap={5} align="start">
+                {columns.map((cards) => (
+                  <VStack key={cards[0].file} gap={5}>
+                    {cards.map(({file, Component}) => (
+                      <Component key={file} />
+                    ))}
                   </VStack>
-                  <VStack gap={5} xstyle={styles.wide}>
-                    <TasksTableCard />
-                    <CodeEditorCard />
-                  </VStack>
-                  <VStack gap={5} xstyle={[styles.pair, styles.pairA]}>
-                    <CardColumn cards={workAndData} xstyle={styles.a} />
-                    <CardColumn cards={commerce} xstyle={styles.left} />
-                  </VStack>
-                  <VStack gap={5} xstyle={[styles.pair, styles.pairB]}>
-                    <CardColumn cards={peopleAndStates} xstyle={styles.b} />
-                    <CardColumn cards={communicationAndMedia} xstyle={styles.right} />
-                  </VStack>
-                </Grid>
-              </main>
-              <FloatingToolbar />
+                ))}
+              </Grid>
             </VStack>
+            <FloatingToolbar />
           </LayoutContent>
         }
       />

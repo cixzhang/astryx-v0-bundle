@@ -1,3 +1,5 @@
+'use client';
+
 import {InboxIcon} from '@heroicons/react/24/outline';
 import {Button} from '@astryxdesign/core/Button';
 import {Card} from '@astryxdesign/core/Card';

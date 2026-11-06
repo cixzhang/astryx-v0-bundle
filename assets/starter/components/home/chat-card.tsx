@@ -1,6 +1,6 @@
 'use client';
 
-import {useState} from 'react';
+import {useState, useSyncExternalStore} from 'react';
 import * as stylex from '@stylexjs/stylex';
 import {
   CalendarIcon,
@@ -43,11 +43,22 @@ const cannedReplies = [
   'This is a demo chat, so replies are prewritten. Ask v0 in the real chat to build it for you.',
 ];
 
+const subscribeToNothing = () => () => {};
+
+// useSpeechRecognition reports support only in the browser, so the server and
+// first client render disagree about the dictation button. Render it after hydration.
+function useIsHydrated() {
+  return useSyncExternalStore(
+    subscribeToNothing,
+    () => true,
+    () => false,
+  );
+}
+
 const styles = stylex.create({
   card: {
     display: 'flex',
     flexDirection: 'column',
-    height: 560,
     overflow: 'hidden',
   },
   // ChatLayout scrolls its own messages, so its column parent must fill the card's bounded height.
@@ -67,10 +78,6 @@ const styles = stylex.create({
     // Offsets ChatLayout's bottom scroll padding plus the composer's top gutter
     // so the greeting centers between the header and the suggestion chips.
     paddingTop: 68,
-    paddingBottom: 0,
-  },
-  centerText: {
-    textAlign: 'center',
   },
   chip: {
     flexShrink: 0,
@@ -81,6 +88,7 @@ const styles = stylex.create({
 export function ChatCard() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [draft, setDraft] = useState('');
+  const isHydrated = useIsHydrated();
   const dictation = useSpeechRecognition({
     onResult: (transcript) =>
       setDraft((current) => (current ? `${current} ${transcript}` : transcript)),
@@ -132,13 +140,15 @@ export function ChatCard() {
             icon={<Icon icon={PlusIcon} size="sm" />}
           />
         }
-        sendActions={<ChatDictationButton dictation={dictation} />}
+        sendActions={
+          isHydrated ? <ChatDictationButton dictation={dictation} /> : undefined
+        }
       />
     </VStack>
   );
 
   return (
-    <Card padding={0} xstyle={styles.card}>
+    <Card padding={0} height={560} xstyle={styles.card}>
       <HStack gap={2} vAlign="center" paddingBlockStart={5} paddingInline={5}>
         <Icon icon={SparklesIcon} size="md" />
         <Text weight="semibold">Agent</Text>
@@ -153,10 +163,10 @@ export function ChatCard() {
               vAlign="center"
               xstyle={styles.greeting}
             >
-              <Heading level={2} xstyle={styles.centerText}>
+              <Heading level={2} justify="center">
                 How can I help you today?
               </Heading>
-              <Text color="secondary" xstyle={styles.centerText}>
+              <Text color="secondary" justify="center">
                 Pick a starting point or ask anything.
               </Text>
             </VStack>
