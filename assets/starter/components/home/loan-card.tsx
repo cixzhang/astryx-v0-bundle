@@ -14,7 +14,6 @@ const styles = stylex.create({
   card: {
     position: 'relative',
     overflow: 'hidden',
-    minHeight: 440,
     borderWidth: 0,
   },
   artwork: {
@@ -29,17 +28,20 @@ const styles = stylex.create({
     insetInline: 0,
     bottom: 0,
     backgroundImage:
-      'linear-gradient(to top, rgba(20, 20, 24, 0.72), rgba(20, 20, 24, 0))',
+      'linear-gradient(to top, color-mix(in srgb, var(--color-on-light) 72%, transparent), transparent)',
   },
   onImage: {
-    color: '#ffffff',
+    color: 'var(--color-on-dark)',
   },
   pill: {
-    borderRadius: 999,
-    backgroundColor: {default: '#ffffff', ':hover': '#f1f1f3'},
+    borderRadius: 'var(--radius-full)',
+    backgroundColor: {
+      default: 'var(--color-on-dark)',
+      ':hover': 'color-mix(in srgb, var(--color-on-dark) 92%, var(--color-on-light))',
+    },
   },
   pillText: {
-    color: '#55555c',
+    color: 'var(--color-on-light)',
   },
 });
 
@@ -49,7 +51,12 @@ export function LoanCard() {
   const product = shop.products[HERO_SLOT];
 
   return (
-    <Card padding={0} elevation="none" xstyle={[styles.card, cardShadow.raised]}>
+    <Card
+      padding={0}
+      minHeight={440}
+      elevation="none"
+      xstyle={[styles.card, cardShadow.raised]}
+    >
       <img
         src={`/products/${themeName}/${imageSlots[HERO_SLOT]}.png`}
         alt={product.name}
