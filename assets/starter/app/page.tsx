@@ -22,7 +22,6 @@ import {OnboardingCard} from '@/components/home/onboarding-card';
 import {PlanCard} from '@/components/home/plan-card';
 import {ProductCard} from '@/components/home/product-card';
 import {ProjectCard} from '@/components/home/project-card';
-import {ShortcutsCard} from '@/components/home/shortcuts-card';
 import {TasksTableCard} from '@/components/home/tasks-table-card';
 
 interface CardEntry {
@@ -35,7 +34,6 @@ const columns: CardEntry[][] = [
   [
     {file: 'revenue-card', Component: RevenueCard},
     {file: 'project-card', Component: ProjectCard},
-    {file: 'shortcuts-card', Component: ShortcutsCard},
     {file: 'plan-card', Component: PlanCard},
     {file: 'onboarding-card', Component: OnboardingCard},
   ],
